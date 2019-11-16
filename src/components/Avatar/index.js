@@ -1,6 +1,6 @@
 import style from './index.scss';
 import { Job as JobData } from '../../data';
-import path from 'path';
+import { JobIcons } from './image';
 
 export default ({ size = '2.5rem', deaths = 0, job, diy }) => {
   const avatarStyle = {
@@ -10,13 +10,13 @@ export default ({ size = '2.5rem', deaths = 0, job, diy }) => {
   };
 
   const Jobs = Object.keys(JobData);
-  const Job = Jobs.indexOf(job) === -1 ? 'default' : job;
+  const Job = Jobs.indexOf(job) === -1 ? '_default' : job;
   const Img = diy ? (
     <div className={style.diy}>
       <div style={{ backgroundImage: `url(${job})` }} />
     </div>
   ) : (
-    <img src={path.join('/img/jobs', Job + '.png')} />
+    <img src={JobIcons[Job]} />
   );
   return (
     <div className={style.avatar} style={avatarStyle}>

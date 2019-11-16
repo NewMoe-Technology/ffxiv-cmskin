@@ -3,7 +3,7 @@ import { Lang } from '../';
 import style from './index.scss';
 
 const View = ({ transparent, children, ...other }) => {
-  if (window.location.pathname.indexOf('setting') !== -1) transparent = false;
+  if (window.memoryHistory.location.pathname.indexOf('setting') !== -1) transparent = false;
   return (
     <div
       className={classnames.bind(style)({

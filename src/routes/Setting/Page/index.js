@@ -42,7 +42,7 @@ class PageComponent extends Component {
         </div>
       }
     >
-      {window.websocket ? <Back /> : null}
+      <Back />
     </Footer>,
   ];
 }

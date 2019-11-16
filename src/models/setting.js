@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { getCookie, setCookie } from '../services/cookie';
+import { getStorage, setStorage } from '../services/storage';
 import { Console } from '../services/debug';
 
 let timekey = -1;
@@ -70,10 +70,10 @@ export default {
     *root({}, { put, select }) {
       const Setting = yield select(state => state.setting);
       try {
-        const Cookie = getCookie('setting');
-        if (Cookie.timekey !== timekey) {
-          const Data = _.assign(Setting, Cookie);
-          timekey = Cookie.timekey;
+        const Storage = getStorage('setting');
+        if (Storage.timekey !== timekey) {
+          const Data = _.assign(Setting, Storage);
+          timekey = Storage.timekey;
           window.lang = Data.lang;
           yield put({ type: 'save', payload: Data });
           // debug
@@ -81,7 +81,7 @@ export default {
           Console.table(Data);
         }
       } catch (e) {
-        setCookie('setting', Setting);
+        setStorage('setting', Setting);
         console.log('[CM] Setting Root');
       }
     },
@@ -89,7 +89,7 @@ export default {
       const Setting = yield select(state => state.setting);
       const Data = _.assign(Setting, data);
       Data.timekey++;
-      setCookie('setting', Data);
+      setStorage('setting', Data);
       yield put({ type: 'save', payload: Data });
       // debug
       console.log('[CM] Setting Update');

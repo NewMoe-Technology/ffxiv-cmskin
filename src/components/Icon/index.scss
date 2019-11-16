@@ -49,6 +49,11 @@
     text-shadow: 0 1px 3px rgba(#000, 0.3);
     color: rgba($c-yellow, 0.9);
   }
+  svg {
+    height: 100%;
+    width: 100%;
+    padding: 7px;
+  }
   + .icon {
     margin-top: 0.5rem;
   }

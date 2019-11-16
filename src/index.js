@@ -1,14 +1,17 @@
 import { Message } from './components';
 import dva from 'dva';
 import createLoading from 'dva-loading';
-import createHistory from 'history/createBrowserHistory';
+import { createMemoryHistory as createHistory } from 'history';
 import Console from './utils/console';
 import Debug from './services/debug';
 import './index.scss';
 
+const history = createHistory();
+window.memoryHistory = history;
+
 // 1. Initialize
 const app = dva({
-  history: createHistory(),
+  history,
   onError(e) {
     Message.error(e.message, 3);
   },

@@ -1,15 +1,13 @@
 import { Route, Router, Switch } from 'dva/router';
-import dynamic from 'dva/dynamic';
 import App from './routes/App';
+import Overlay from './routes/Overlay';
+import Team from './routes/Team';
+import History from './routes/History';
+import Detail from './routes/Detail';
+import Qrcode from './routes/Qrcode';
+import Setting from './routes/Setting';
 
 export default ({ app, history }) => {
-  const Overlay = dynamic({ app, component: () => import('./routes/Overlay') });
-  const Team = dynamic({ app, component: () => import('./routes/Team') });
-  const History = dynamic({ app, component: () => import('./routes/History') });
-  const Detail = dynamic({ app, component: () => import('./routes/Detail') });
-  const Qrcode = dynamic({ app, component: () => import('./routes/Qrcode') });
-  const Setting = dynamic({ app, component: () => import('./routes/Setting') });
-
   return (
     <Router history={history}>
       <Switch>

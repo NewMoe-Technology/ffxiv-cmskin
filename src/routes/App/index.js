@@ -5,6 +5,7 @@ import { Component } from 'react';
 import { View, Message, Lang } from '../../components';
 import { getSetting } from '../../utils/getSetting';
 import style from './index.scss';
+import Icon from '../../../public/img/icon.png';
 
 const { Split } = View;
 const Setting = [
@@ -30,8 +31,9 @@ class App extends Component {
     if (window.websocket) {
       this.props.dispatch(routerRedux.push('/setting/basic'));
     } else {
-      const Scale = this.props.uiScaleActive ? this.props.uiScale : 1;
-      window.open('/setting/basic', '设置', `height=${680 * Scale}, width=${480 * Scale}`);
+      // const Scale = this.props.uiScaleActive ? this.props.uiScale : 1;
+      // window.open('/setting/basic', '设置', `height=${680 * Scale}, width=${480 * Scale}`);
+      this.props.dispatch(routerRedux.push('/setting/basic'));
     }
   };
   handleFullscreen = () => {
@@ -50,7 +52,7 @@ class App extends Component {
     }, 500);
   };
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.dispatch({ type: 'setting/root' });
     setInterval(() => this.props.dispatch({ type: 'setting/root' }), 2000);
   }
@@ -61,7 +63,7 @@ class App extends Component {
     this.handleUiSize($.uiScaleActive ? 16 * $.uiScale : 16);
 
     // 判断路径和环境
-    const isInSetting = window.location.pathname.indexOf('setting') !== -1;
+    const isInSetting = window.memoryHistory.location.pathname.indexOf('setting') !== -1;
     const isInDevelop = $isDev;
 
     // 规划右键菜单
@@ -119,7 +121,7 @@ class App extends Component {
     ) : (
       <div className={$.uiTrans ? style.iconTrans : style.icon} onClick={this.handleFullscreen}>
         <div className={style.iconInner}>
-          <img src="/img/icon.png" />
+          <img src={Icon} />
         </div>
       </div>
     );

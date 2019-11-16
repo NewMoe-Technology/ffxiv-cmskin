@@ -8,7 +8,7 @@ export default ({ to, type, ...other }) => {
     <Link
       to={to}
       className={classnames.bind(style)('icon', {
-        active: window.location.pathname === to,
+        active: window.memoryHistory.location.pathname === to,
       })}
       {...other}
     >

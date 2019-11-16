@@ -1,16 +1,15 @@
 import { Route } from 'dva/router';
-import dynamic from 'dva/dynamic';
 import { View, Icon, Lang } from '../../components';
 import style from './index.scss';
 import _ from 'lodash';
+import PageQuantity from './PageQuantity';
+import PageBasic from './PageBasic';
+import PageNormal from './PageNormal';
+import PageDetail from './PageDetail';
+import pageComment from './pageComment';
+import PageAbout from './PageAbout';
 
 const { Bar, Header } = View;
-const PageQuantity = dynamic({ component: () => import('./PageQuantity') });
-const PageBasic = dynamic({ component: () => import('./PageBasic') });
-const PageNormal = dynamic({ component: () => import('./PageNormal') });
-const PageDetail = dynamic({ component: () => import('./PageDetail') });
-const pageComment = dynamic({ component: () => import('./pageComment') });
-const PageAbout = dynamic({ component: () => import('./PageAbout') });
 
 const Doc = {
   '/setting/basic': {
@@ -55,7 +54,7 @@ export default () => {
   return [
     <Header key="header">{Lang('setting.header')}</Header>,
     <Bar key="bar" className={style.bar}>
-      {Lang(Doc[window.location.pathname].name)}
+      {Lang(Doc[window.memoryHistory.location.pathname].name)}
     </Bar>,
     <div key="content" className={style.flex}>
       <div className={style.left}>{sidebar}</div>
