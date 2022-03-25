@@ -22,8 +22,10 @@ import pgl from '../../../public/img/jobs/pgl.png';
 import pld from '../../../public/img/jobs/pld.png';
 import rdm from '../../../public/img/jobs/rdm.png';
 import rog from '../../../public/img/jobs/rog.png';
+import rpr from '../../../public/img/jobs/rpr.png';
 import sam from '../../../public/img/jobs/sam.png';
 import sch from '../../../public/img/jobs/sch.png';
+import sge from '../../../public/img/jobs/sge.png';
 import smn from '../../../public/img/jobs/smn.png';
 import thm from '../../../public/img/jobs/thm.png';
 import war from '../../../public/img/jobs/war.png';
@@ -54,8 +56,10 @@ export const JobIcons = {
   pld,
   rdm,
   rog,
+  rpr,
   sam,
   sch,
+  sge,
   smn,
   thm,
   war,
