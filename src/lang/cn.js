@@ -1,5 +1,6 @@
 const Splash = {
   changelog: [
+    '|2021.11.14|v2.2.3|Add 添加钐镰客、贤者图标和文字',
     '|2019.11.02|v2.2.2|Add 显示亲信战友系统中 NPC 的名字|',
     '|2019.11.01|v2.2.1|Add 添加青魔、舞者、绝枪战士图标和文字|',
     '|2017.12.01|v2.2.0|Adj 右键菜单,移出折叠增加初始化,折叠按钮移动至右上角|',
@@ -212,10 +213,12 @@ export default {
   'role.sam': '武士',
   'role.blu': '青魔',
   'role.dnc': '舞者',
+  'role.rpr': '钐镰',
   'role.ast': '占星',
   'role.cnj': '幻术',
   'role.whm': '白魔',
   'role.sch': '学者',
+  'role.sge': '贤者',
   'role.drk': '黑骑',
   'role.mrd': '斧术',
   'role.war': '战士',
