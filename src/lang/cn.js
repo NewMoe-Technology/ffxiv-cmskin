@@ -1,6 +1,6 @@
 const Splash = {
   changelog: [
-    '|2021.11.14|v2.2.3|Add 添加钐镰客、贤者图标和文字',
+    '|2022.03.25|v2.2.3|Add 添加钐镰客、贤者图标和文字',
     '|2019.11.02|v2.2.2|Add 显示亲信战友系统中 NPC 的名字|',
     '|2019.11.01|v2.2.1|Add 添加青魔、舞者、绝枪战士图标和文字|',
     '|2017.12.01|v2.2.0|Adj 右键菜单,移出折叠增加初始化,折叠按钮移动至右上角|',
@@ -51,18 +51,6 @@ const Splash = {
     '|皮肤地址|http://ffxiv.canisminor.cc|',
   ],
 };
-
-const npcName = [
-  '水晶公',
-  '阿尔菲诺',
-  '阿莉塞',
-  '莱楠',
-  '桑克瑞德',
-  '于里昂热',
-  '敏菲利亚',
-  '雅·修特拉',
-  '琳',
-];
 
 export default {
   // basic
@@ -227,8 +215,6 @@ export default {
   'role.gnb': '绝枪',
   'role.chocobo': '陆行鸟',
   'role.limitbreak': '极限技',
-  // name list of NPC
-  npcName,
   // encounter
   'encounter.time': '时间',
   'encounter.damage.total': '总输出',
