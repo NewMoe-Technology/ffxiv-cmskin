@@ -9,7 +9,7 @@
 
 `ACT` `OverlayPlugin` `FFXIV` `React` `Redux`
 
-**FFXIV CanisMinor ActSkin (forked and hosted by ffcafe):** [🌱 Online](https://act.qianqu.me/overlay/canisminor/)
+**FFXIV CanisMinor ActSkin (forked by ESTI):** 
 
 **README:** [📙 English (EN)](en_README.md)
 
@@ -28,6 +28,7 @@
 ![](http://qn.canisminor.cc/2017-11-14-10.png)
 
 <br />
+## 该分支尚不可用，请等待debug结束。
 
 ## 安装 (2 选 1)
 
