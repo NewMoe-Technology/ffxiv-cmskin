@@ -13,7 +13,7 @@ const CHANGYAN_API = {
 };
 
 export default class extends Component {
-  componentWillMount() {
+  componentDidMount() {
     setTimeout(() => {
       createNs();
       createMobileNs();

@@ -51,7 +51,7 @@ class App extends Component {
   };
 
   // eslint-disable-next-line react/no-deprecated
-  componentWillMount() {
+  componentDidMount() {
     this.props.dispatch({ type: 'setting/root' });
     setInterval(() => this.props.dispatch({ type: 'setting/root' }), 2000);
   }
