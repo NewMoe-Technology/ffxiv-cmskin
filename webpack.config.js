@@ -25,7 +25,7 @@ module.exports = {
     ]
   },
   output: {
-    filename: '[name].[contenthash:8].js',
+    filename: 'vendor.[contenthash:8].js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: ''
   },
@@ -52,7 +52,7 @@ module.exports = {
             loader: 'css-loader',
             options: {
               modules: {
-                localIdentName: '[local]___[hash:base64:5]',
+                localIdentName: '[local]___[hash:base64:5]'
               },
               importLoaders: 1,
             },
@@ -90,9 +90,7 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: {
-                localIdentName: '[local]___[hash:base64:5]',
-              },
+              modules: false,
               importLoaders: 1
             },
           },
@@ -128,9 +126,7 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: {
-                localIdentName: '[local]___[hash:base64:5]',
-              }
+              modules: false 
             },
           },
           {
@@ -170,8 +166,11 @@ module.exports = {
           from: path.resolve(__dirname, './public')
         }
       ]
-    }
-    ),
+    }),
+    new webpack.IgnorePlugin({
+      resourceRegExp: /^\.\/locale$/,
+      contextRegExp: /moment$/,
+    })
   ],
   optimization: {
     minimize: true,
