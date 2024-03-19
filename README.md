@@ -9,26 +9,14 @@
 
 `ACT` `OverlayPlugin` `FFXIV` `React` `Redux`
 
-**FFXIV CanisMinor ActSkin (forked by ESTI):** 
+**FFXIV CanisMinor ActSkin (Forked by Diemoe):** 
 
 **README:** [📙 English (EN)](en_README.md)
 
-## OverView
-
-![](http://qn.canisminor.cc/2017-11-14-2.png)
-![](http://qn.canisminor.cc/2017-11-14-3.png)
-![](http://qn.canisminor.cc/2017-11-14-4.png)
-![](http://qn.canisminor.cc/2017-11-14-5.png)
-![](http://qn.canisminor.cc/2017-12-06-12.png)
-![](http://qn.canisminor.cc/2017-11-14-6.png)
-![](http://qn.canisminor.cc/2017-11-16-13.png)
-![](http://qn.canisminor.cc/2017-11-14-7.png)
-![](http://qn.canisminor.cc/2017-11-14-8.png)
-![](http://qn.canisminor.cc/2017-11-14-9.png)
-![](http://qn.canisminor.cc/2017-11-14-10.png)
-
-<br />
-## 该分支尚不可用，请等待debug结束。
+## 如何调试/编译
+安装依赖: ```yarn install``` 或 ```npm install```
+运行开发环境: ```yarn start``` 或 ```npm run start```
+编译发行版: ```yarn build``` 或 ```npm run build```
 
 ## 安装 (2 选 1)
 
