@@ -1,5 +1,4 @@
 import classnames from 'classnames/bind';
-import path from 'path';
 import _ from 'lodash';
 import { Link } from 'dva/router';
 import { connect } from 'dva';
@@ -153,7 +152,7 @@ const ListView = ({ tab, chart, item, firstItem, hasDps, avps, isBattle, ...$ })
   if (!tabData[tab].number || isNaN(tabData[tab].number) || tabData[tab].number === 0) return null;
 
   return (
-    <Link to={path.join('/detail', item.name)} className={listClass}>
+    <Link to={"/detail/" + item.name} className={listClass}>
       <div className={classnames.bind(style)('left', { leftWithoutGraph: $.graphHide })}>
         <Avatar
           deaths={item.healing.deaths}

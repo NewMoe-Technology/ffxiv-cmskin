@@ -1,6 +1,5 @@
 import style from './index.scss';
 import { Job as JobData } from '../../data';
-import path from 'path';
 
 export default ({ size = '2.5rem', deaths = 0, job, diy }) => {
   const avatarStyle = {
@@ -16,7 +15,7 @@ export default ({ size = '2.5rem', deaths = 0, job, diy }) => {
       <div style={{ backgroundImage: `url(${job})` }} />
     </div>
   ) : (
-    <img src={path.join('img/jobs', Job + '.png')} />
+    <img src={"img/jobs/" + Job + ".png"} />
   );
   return (
     <div className={style.avatar} style={avatarStyle}>
