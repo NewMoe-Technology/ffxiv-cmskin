@@ -9,7 +9,7 @@
 
 `ACT` `OverlayPlugin` `FFXIV` `React` `Redux`
 
-**FFXIV CanisMinor ActSkin (Forked by NewMoe):** 
+**FFXIV CanisMinor ActSkin (Forked by NewMoe-Tech):** 
 
 **README:** [📙 English (EN)](en_README.md)
 
