@@ -9,14 +9,14 @@
 
 `ACT` `OverlayPlugin` `FFXIV` `React` `Redux`
 
-**FFXIV CanisMinor ActSkin (Forked by Diemoe):** 
+**FFXIV CanisMinor ActSkin (Forked by NewMoe):** 
 
 **README:** [📙 English (EN)](en_README.md)
 
 ## 如何调试/编译
-安装依赖: ```yarn install``` 或 ```npm install```
-运行开发环境: ```yarn start``` 或 ```npm run start```
-编译发行版: ```yarn build``` 或 ```npm run build```
+安装依赖: ```yarn install``` 或 ```npm install```  
+运行开发环境: ```yarn start``` 或 ```npm run start```  
+编译发行版: ```yarn build``` 或 ```npm run build```  
 
 ## 安装 (2 选 1)
 
