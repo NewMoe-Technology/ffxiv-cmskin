@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const PxtoremPlugin = require('postcss-pxtorem');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const webpack = require('webpack');
 const theme = require('./src/style/theme');
 
@@ -170,7 +171,8 @@ module.exports = {
     new webpack.IgnorePlugin({
       resourceRegExp: /^\.\/locale$/,
       contextRegExp: /moment$/,
-    })
+    }),
+    new CleanWebpackPlugin()
   ],
   optimization: {
     minimize: true,
