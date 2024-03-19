@@ -6,7 +6,6 @@
 	"plugins": [
 		["import", { "libraryName": "antd", "libraryDirectory": "es", "style": true }],
 		"@babel/transform-runtime",
-		"dva-hmr",
 		"lodash"
 	]
 }
