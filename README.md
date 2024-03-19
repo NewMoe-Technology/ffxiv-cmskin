@@ -15,7 +15,7 @@
 
 ## 如何调试/编译
 安装依赖: ```yarn install``` 或 ```npm install```  
-运行开发环境: ```yarn start``` 或 ```npm run start```  
+运行开发环境: ```yarn dev``` 或 ```npm run dev```  
 编译发行版: ```yarn build``` 或 ```npm run build```  
 
 ## 安装 (2 选 1)
