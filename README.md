@@ -1,15 +1,12 @@
 # CanisMinor ACT
 
-![](http://qn.canisminor.cc/2017-11-14-1.png)
-
-[![](https://img.shields.io/github/license/canisminor1990/ffxiv-cmskin.svg)](https://github.com/canisminor1990/ffxiv-cmskin/blob/master/LICENSE)
-[![](https://img.shields.io/github/tag/canisminor1990/ffxiv-cmskin.svg)](https://github.com/canisminor1990/ffxiv-cmskin)
-[![](https://img.shields.io/badge/Works%20with-ActWebsocket-green.svg)](https://github.com/ZCube/ACTWebSocket)
-[![](https://img.shields.io/badge/Works%20with-OverlayPlugin-green.svg)](https://github.com/hibiyasleep/OverlayPlugin)
+[![](https://img.shields.io/github/license/NewMoe-Technology/ffxiv-cmskin.svg)](https://github.com/NewMoe-Technology/ffxiv-cmskin/blob/master/LICENSE)
+[![](https://img.shields.io/github/tag/NewMoe-Technology/ffxiv-cmskin.svg)](https://github.com/NewMoe-Technology/ffxiv-cmskin)
+[![](https://img.shields.io/badge/Works%20with-OverlayPlugin-green.svg)](https://github.com/OverlayPlugin/OverlayPlugin)
 
 `ACT` `OverlayPlugin` `FFXIV` `React` `Redux`
 
-**FFXIV CanisMinor ActSkin (Forked by NewMoe-Tech):** 
+**FFXIV CanisMinor ActSkin (Forked by NewMoe-Tech):** https://overlay.diemoe.net/cmskin
 
 **README:** [📙 English (EN)](en_README.md)
 
@@ -18,26 +15,16 @@
 运行开发环境: ```yarn dev``` 或 ```npm run dev```  
 编译发行版: ```yarn build``` 或 ```npm run build```  
 
-## 安装 (2 选 1)
-
-**ACTWebSocket (推荐)：**
-
-- 下载最新版`ACTWebSocket`: [🔗 Latest](https://github.com/ZCube/ACTWebSocket/releases)
-- NGA 整合版请使用: [🔗 整合版专用](https://coding.net/u/canisminor1990/p/act-websocket/git/archive/v1.0.0.zip)
-- ✅ 开启 Html 服务器
-- ✅ 启动模板管理器
-- ACTWebSocket > 添加模板 > 拷贝下面的地址
-- 打开模板管理器 > 选择 FFXIV - CanisMinor ActSkin > new
+## 安装
 
 **OverlayPlugin：**
 
-- 下载最新版`OverlayPlugin`: [🔗 Latest](https://github.com/hibiyasleep/OverlayPlugin/releases)
-- 或直接下载 ACT 整合包: [🔗 NGA](http://bbs.ngacn.cc/read.php?tid=12526945)
+- 下载最新版`OverlayPlugin`: [🔗 Latest](https://github.com/OverlayPlugin/OverlayPlugin/releases)
 - DPS 统计美化插件 > DPS 统计（MiniParser）> 模板路径
 
 ```sh
 # 拷贝下面的地址至模板路径
-http://ffxiv.canisminor.cc
+https://overlay.diemoe.net/cmskin
 ```
 
 ## 更新说明
