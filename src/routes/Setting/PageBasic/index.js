@@ -79,7 +79,7 @@ class Overlay extends PageComponent {
         <Select
           defaultValue={$.lang}
           mode={false}
-          options={['cn', 'en']}
+          options={['cn', 'en', 'kr']}
           onChange={this.handleLangChange}
         />
       </div>

@@ -1,5 +1,6 @@
 const Splash = {
   changelog: [
+    '|2024.03.24|v2.3.2|Adj Revive project and fix some leftover issues, properly implement Korean language',
     '|2022.03.25|v2.2.3|Add Jon icon and text for Reaper, Sage',
     '|2019.11.02|v2.2.2|Add Display NPC name in The Trust System|',
     '|2019.11.01|v2.2.1|Add Job icon and text for BlueMage, Dancer, Gunbreaker|',
@@ -172,6 +173,10 @@ export default {
   'setting.about.contact': 'Contact',
   'setting.about.git': 'Git Lib',
   'setting.about.link': 'Links',
+  // setting.*.title
+  'setting.damage.title': 'Top Damaging',
+  'setting.healing.title': 'Top Healing',
+  'setting.tanking.title': 'Tanking',
   // placeholder
   'placeholder.you': 'YOU',
   'placeholder.img': 'Img Url',

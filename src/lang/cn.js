@@ -1,5 +1,6 @@
 const Splash = {
   changelog: [
+    '|2024.03.24|v2.3.2|Adj 复活项目并修复一些遗留问题, 正确添加韩语',
     '|2022.03.25|v2.2.3|Add 添加钐镰客、贤者图标和文字',
     '|2019.11.02|v2.2.2|Add 显示亲信战友系统中 NPC 的名字|',
     '|2019.11.01|v2.2.1|Add 添加青魔、舞者、绝枪战士图标和文字|',
@@ -56,6 +57,7 @@ export default {
   // basic
   cn: '简体中文',
   en: 'English',
+  kr: '한국어',
   damage: '输出',
   healing: '治疗',
   tanking: '承伤',
@@ -172,6 +174,10 @@ export default {
   'setting.about.contact': '联系方式',
   'setting.about.git': '项目地址',
   'setting.about.link': '外部链接',
+  // setting.*.title
+  'setting.damage.title': '最高输出',
+  'setting.healing.title': '最高治疗',
+  'setting.tanking.title': '承伤',
   // placeholder
   'placeholder.you': '我',
   'placeholder.img': '图片网址',

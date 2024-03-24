@@ -40,9 +40,10 @@ const State = state => getSetting(Setting, state.setting);
 const ListView = ({ tab, chart, item, firstItem, hasDps, avps, isBattle, ...$ }) => {
   if (!item.job || item.job === 'you') return [];
 
-  const Img = item.isMy ? ($.imgActive ? $.img : item.job) : item.job;
+  const Img = item.isMy ? ($.imgActive ? $.img : item.job) : (item.job == "limit break" ? "limitbreak" : item.job); // Compatibility
   let Name = item.isMy ? ($.nameActive ? $.name : item.name) : item.name;
-  if ($.hideName) Name = Lang(`role.${item.job}`);
+
+  if ($.hideName && Img !== "limitbreak") Name = Lang(`role.${item.job}`);
 
   const tabData = {
     dps: {
