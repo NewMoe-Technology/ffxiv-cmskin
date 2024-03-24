@@ -54,18 +54,6 @@ const Github = [
     ),
   },
   {
-    title: 'Coding',
-    desc: (
-      <a
-        href="https://git.coding.net/canisminor1990/ffxiv-cmskin.git"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        coding.net/canisminor1990/ffxiv-cmskin
-      </a>
-    ),
-  },
-  {
     title: 'NGA',
     desc: (
       <a href="http://bbs.ngacn.cc/read.php?tid=12689516" target="_blank" rel="noopener noreferrer">
@@ -97,22 +85,6 @@ const Link = [
         rel="noopener noreferrer"
       >
         ff14.huijiwiki.com
-      </a>
-    ),
-  },
-  {
-    title: 'ACT整合',
-    desc: (
-      <a href="http://bbs.ngacn.cc/read.php?tid=12526945" target="_blank" rel="noopener noreferrer">
-        bbs.ngacn.cc/read.php?tid=12526945
-      </a>
-    ),
-  },
-  {
-    title: 'ACT时间轴',
-    desc: (
-      <a href="http://bbs.ngacn.cc/read.php?tid=12766323" target="_blank" rel="noopener noreferrer">
-        bbs.ngacn.cc/read.php?tid=12766323
       </a>
     ),
   },
