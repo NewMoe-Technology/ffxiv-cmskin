@@ -10,6 +10,7 @@ const Setting = {
   nameActive: true,
   img: '',
   imgActive: false,
+  iconSet: "icon_default",
   // Data
   graphHide: false,
   graphTime: 30,

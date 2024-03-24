@@ -34,6 +34,7 @@ const Setting = [
   'qtOverHealLow',
   'qtUp',
   'qtDown',
+  'iconSet'
 ];
 
 const State = state => getSetting(Setting, state.setting);
@@ -161,6 +162,7 @@ const ListView = ({ tab, chart, item, firstItem, hasDps, avps, isBattle, ...$ })
           job={Img}
           diy={$.imgActive && item.isMy}
           size={$.uiMini ? '1.5rem' : '2.5rem'}
+          iconSet={$.iconSet}
         />
         <div className={style.header}>
           <div key="name" className={style.name}>

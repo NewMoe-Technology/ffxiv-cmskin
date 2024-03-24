@@ -61,6 +61,8 @@ export default {
   damage: '输出',
   healing: '治疗',
   tanking: '承伤',
+  icon_default: '默认图标',
+  icon_glow: '发光图标',
   // splash
   'splash.changelog': '更新说明',
   'splash.usage': '使用说明',
@@ -140,6 +142,7 @@ export default {
   'setting.basic.split.gui': '界面',
   'setting.basic.uiAutoMiniActive': '自动切换迷你 (>人数)',
   'setting.basic.uiScaleActive': 'UI缩放 (倍)',
+  'setting.basic.icon': '职业图标',
   //
   'setting.basic.split.history': '历史记录',
   'setting.basic.historyLength': '历史记录条数',

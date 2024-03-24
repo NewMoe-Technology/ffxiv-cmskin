@@ -1,6 +1,5 @@
 @import 'import';
 .input {
-  margin-bottom: 1rem;
   position: relative;
 }
 .menu {
@@ -98,7 +97,8 @@
   }
 }
 .single {
-  max-width: 10rem;
+  max-width: 11rem;
+  margin-left: 0.3rem;
   :global {
     .ant-select-selection {
       background: linear-gradient(

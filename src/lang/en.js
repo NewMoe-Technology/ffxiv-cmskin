@@ -60,6 +60,8 @@ export default {
   damage: 'Damage',
   healing: 'Healing',
   tanking: 'Tanking',
+  icon_default: 'Default Icon',
+  icon_glow: 'Glow Icon',
   // splash
   'splash.changelog': 'Changelog',
   'splash.usage': 'Usage',
@@ -139,6 +141,7 @@ export default {
   'setting.basic.split.gui': 'Gui',
   'setting.basic.uiAutoMiniActive': 'Auto Mini (>num)',
   'setting.basic.uiScaleActive': 'UI Scale',
+  'setting.basic.icon': 'Job Icons',
   //
   'setting.basic.split.history': 'History',
   'setting.basic.historyLength': 'History Length',

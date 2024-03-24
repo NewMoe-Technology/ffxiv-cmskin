@@ -12,6 +12,7 @@ const State = state => ({
 class Overlay extends PageComponent {
   Setting = [
     'lang',
+    'iconSet',
     'name',
     'nameActive',
     'img',
@@ -37,6 +38,10 @@ class Overlay extends PageComponent {
 
   handleLangChange = value => {
     this.setState({ lang: value });
+  };
+
+  handleIconChange = value => {
+    this.setState({ iconSet: value });
   };
 
   inputOnChange = (e, name, isNumber) => {
@@ -85,6 +90,18 @@ class Overlay extends PageComponent {
       </div>
     );
 
+    const IconThemeItem = () => (
+      <div className={style.listLang}>
+        <div className={style.listLangTitle}>{Lang('setting.basic.icon')}</div>
+        <Select
+          defaultValue={$.iconSet}
+          mode={false}
+          options={['icon_default', 'icon_glow']}
+          onChange={this.handleIconChange}
+        />
+      </div>
+    );
+
     const InputItem = lang => (
       <div className={style.listItem}>
         <span>
@@ -113,6 +130,7 @@ class Overlay extends PageComponent {
           <Split className={style.title} id="setting.basic.split.gui" />
           {CheckItem('uiAutoMiniActive', 'uiAutoMini')}
           {CheckItem('uiScaleActive', 'uiScale')}
+          {IconThemeItem()}
           <Split className={style.title} id="setting.basic.split.history" />
           {InputItem('historyLength')}
         </div>
