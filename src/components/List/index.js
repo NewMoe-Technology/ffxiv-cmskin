@@ -43,7 +43,7 @@ const ListView = ({ tab, chart, item, firstItem, hasDps, avps, isBattle, ...$ })
   const Img = item.isMy ? ($.imgActive ? $.img : item.job) : (item.job == "limit break" ? "limitbreak" : item.job); // Compatibility
   let Name = item.isMy ? ($.nameActive ? $.name : item.name) : item.name;
 
-  if ($.hideName && Img !== "limitbreak") Name = Lang(`role.${item.job}`);
+  if ($.hideName) Name = Lang(`role.${item.job}`);
 
   const tabData = {
     dps: {
