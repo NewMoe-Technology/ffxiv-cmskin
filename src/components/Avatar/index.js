@@ -15,7 +15,7 @@ export default ({ size = '2.5rem', deaths = 0, job, diy }) => {
       <div style={{ backgroundImage: `url(${job})` }} />
     </div>
   ) : (
-    <img src={"img/jobs/" + Job + ".png"} />
+    <img src={"img/jobs/" + Job + ".webp"} />
   );
   return (
     <div className={style.avatar} style={avatarStyle}>

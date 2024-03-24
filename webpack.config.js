@@ -139,13 +139,6 @@ module.exports = {
             }
           }
         ],
-      },
-      {
-        test: /\.(jpg|jpeg|png|svg|gif|swf)$/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'images/[name].[hash][ext]'
-        }
       }
     ]
   },

@@ -1,4 +1,11 @@
+@font-face {
+  font-family: 'Smartisan Hei';
+  src: url("//ffxiv-res.diemoe.net/SmartisanHei.woff2") format("woff2"),
+       url("//ffxiv-res.diemoe.net/SmartisanHei.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: SFNSDisplay-Regular, HelveticaNeue, PingFang SC, Hiragino Sans GB,
-    Microsoft YaHei, sans-serif;
+  font-family: "Smartisan Hei", SFNSDisplay-Regular, HelveticaNeue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
 }
