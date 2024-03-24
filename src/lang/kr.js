@@ -173,10 +173,10 @@ export default {
   'setting.about.contact': 'Contact',
   'setting.about.git': 'Git Lib',
   'setting.about.link': 'Links',
-  // setting.*.title
-  'setting.damage.title': 'Top Damaging',
-  'setting.healing.title': 'Top Healing',
-  'setting.tanking.title': 'Tanking',
+  // progress.*.title
+  'progress.damage.title': 'Top Damaging',
+  'progress.healing.title': 'Top Healing',
+  'progress.tanking.title': 'Tanking',
   // placeholder
   'placeholder.you': 'YOU',
   'placeholder.img': 'Img Url',

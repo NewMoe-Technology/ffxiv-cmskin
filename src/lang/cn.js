@@ -174,10 +174,10 @@ export default {
   'setting.about.contact': '联系方式',
   'setting.about.git': '项目地址',
   'setting.about.link': '外部链接',
-  // setting.*.title
-  'setting.damage.title': '最高输出',
-  'setting.healing.title': '最高治疗',
-  'setting.tanking.title': '承伤',
+  // progress.*.title
+  'progress.damage.title': '最高输出',
+  'progress.healing.title': '最高治疗',
+  'progress.tanking.title': '承伤',
   // placeholder
   'placeholder.you': '我',
   'placeholder.img': '图片网址',

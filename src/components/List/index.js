@@ -49,7 +49,7 @@ const ListView = ({ tab, chart, item, firstItem, hasDps, avps, isBattle, ...$ })
     dps: {
       value: 'damage',
       desc: $.normalDamage,
-      title: item.damage.highest ? item.damage.highest : Lang('setting.damage.title'),
+      title: item.damage.highest ? item.damage.highest : Lang('progress.damage.title'),
       color: options.Setting.damage.color,
       number: item.damage.ps,
       progress: parseInt(item.damage.ps) / parseInt(firstItem.damage.ps),
@@ -57,7 +57,7 @@ const ListView = ({ tab, chart, item, firstItem, hasDps, avps, isBattle, ...$ })
     heal: {
       value: 'healing',
       desc: $.normalHeal,
-      title: item.healing.highest ? item.healing.highest : Lang('setting.healing.title'),
+      title: item.healing.highest ? item.healing.highest : Lang('progress.healing.title'),
       color: options.Setting.healing.color,
       number: item.healing.ps,
       progress: parseInt(item.healing.ps) / parseInt(firstItem.healing.ps),
@@ -65,7 +65,7 @@ const ListView = ({ tab, chart, item, firstItem, hasDps, avps, isBattle, ...$ })
     tank: {
       value: 'tanking',
       desc: $.normalTank,
-      title: Lang('setting.tanking.title'),
+      title: Lang('progress.tanking.title'),
       color: options.Setting.tanking.color,
       number: item.tanking.total,
       progress: parseInt(item.tanking.total) / parseInt(firstItem.tanking.total),
