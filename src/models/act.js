@@ -86,6 +86,7 @@ export default {
         if (isNew) {
           if (data.length > historyLength) data.pop();
           data.unshift(parseData);
+
           data[1].Encounter.name = newEncounter.name;
           data[0].Encounter.name = Lang('header.save');
         } else {

@@ -1,5 +1,4 @@
 import classnames from 'classnames/bind';
-import path from 'path';
 import _ from 'lodash';
 import { Link } from 'dva/router';
 import { connect } from 'dva';
@@ -35,21 +34,24 @@ const Setting = [
   'qtOverHealLow',
   'qtUp',
   'qtDown',
+  'iconSet'
 ];
 
 const State = state => getSetting(Setting, state.setting);
 const ListView = ({ tab, chart, item, firstItem, hasDps, avps, isBattle, ...$ }) => {
   if (!item.job || item.job === 'you') return [];
 
-  const Img = item.isMy ? ($.imgActive ? $.img : item.job) : item.job;
+  const Img = item.isMy ? ($.imgActive ? $.img : item.job) : (item.job == "limit break" ? "limitbreak" : item.job); // Compatibility
   let Name = item.isMy ? ($.nameActive ? $.name : item.name) : item.name;
-  if ($.hideName) Name = Lang(`role.${item.job}`);
+
+  // Fix limit break compatibility
+  if ($.hideName && item.job !== "limit break") Name = Lang(`role.${item.job}`);
 
   const tabData = {
     dps: {
       value: 'damage',
       desc: $.normalDamage,
-      title: item.damage.highest ? item.damage.highest : Lang('setting.damage.title'),
+      title: item.damage.highest ? item.damage.highest : Lang('progress.damage.title'),
       color: options.Setting.damage.color,
       number: item.damage.ps,
       progress: parseInt(item.damage.ps) / parseInt(firstItem.damage.ps),
@@ -57,7 +59,7 @@ const ListView = ({ tab, chart, item, firstItem, hasDps, avps, isBattle, ...$ })
     heal: {
       value: 'healing',
       desc: $.normalHeal,
-      title: item.healing.highest ? item.healing.highest : Lang('setting.healing.title'),
+      title: item.healing.highest ? item.healing.highest : Lang('progress.healing.title'),
       color: options.Setting.healing.color,
       number: item.healing.ps,
       progress: parseInt(item.healing.ps) / parseInt(firstItem.healing.ps),
@@ -65,7 +67,7 @@ const ListView = ({ tab, chart, item, firstItem, hasDps, avps, isBattle, ...$ })
     tank: {
       value: 'tanking',
       desc: $.normalTank,
-      title: Lang('setting.tanking.title'),
+      title: Lang('progress.tanking.title'),
       color: options.Setting.tanking.color,
       number: item.tanking.total,
       progress: parseInt(item.tanking.total) / parseInt(firstItem.tanking.total),
@@ -153,13 +155,14 @@ const ListView = ({ tab, chart, item, firstItem, hasDps, avps, isBattle, ...$ })
   if (!tabData[tab].number || isNaN(tabData[tab].number) || tabData[tab].number === 0) return null;
 
   return (
-    <Link to={path.join('/detail', item.name)} className={listClass}>
+    <Link to={"/detail/" + item.name} className={listClass}>
       <div className={classnames.bind(style)('left', { leftWithoutGraph: $.graphHide })}>
         <Avatar
           deaths={item.healing.deaths}
           job={Img}
           diy={$.imgActive && item.isMy}
           size={$.uiMini ? '1.5rem' : '2.5rem'}
+          iconSet={$.iconSet}
         />
         <div className={style.header}>
           <div key="name" className={style.name}>

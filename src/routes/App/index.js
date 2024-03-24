@@ -51,7 +51,7 @@ class App extends Component {
   };
 
   // eslint-disable-next-line react/no-deprecated
-  componentWillMount() {
+  componentDidMount() {
     this.props.dispatch({ type: 'setting/root' });
     setInterval(() => this.props.dispatch({ type: 'setting/root' }), 2000);
   }
@@ -120,7 +120,7 @@ class App extends Component {
     ) : (
       <div className={$.uiTrans ? style.iconTrans : style.icon} onClick={this.handleFullscreen}>
         <div className={style.iconInner}>
-          <img src="img/icon.png" />
+          <img src="img/icon.webp" />
         </div>
       </div>
     );

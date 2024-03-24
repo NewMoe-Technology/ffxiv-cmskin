@@ -17,6 +17,7 @@ const Setting = [
   'detailDamage',
   'detailHeal',
   'detailTank',
+  'iconSet'
 ];
 const State = state => {
   const act = state.act[state.setting.historyPage];
@@ -111,7 +112,7 @@ const Detail = $ => {
 
   return [
     <Header key="header" className={style.header}>
-      <Avatar size={$.uiMini ? '1.5rem' : '3rem'} deaths={Data.healing.deaths} job={MyImg} />
+      <Avatar size={$.uiMini ? '1.5rem' : '3rem'} deaths={Data.healing.deaths} job={MyImg} iconSet={$.iconSet} />
       <div>
         <div className={style.name}>{MyName}</div>
         {FullHeader}

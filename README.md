@@ -9,26 +9,14 @@
 
 `ACT` `OverlayPlugin` `FFXIV` `React` `Redux`
 
-**FFXIV CanisMinor ActSkin (forked by ESTI):** 
+**FFXIV CanisMinor ActSkin (Forked by NewMoe-Tech):** 
 
 **README:** [📙 English (EN)](en_README.md)
 
-## OverView
-
-![](http://qn.canisminor.cc/2017-11-14-2.png)
-![](http://qn.canisminor.cc/2017-11-14-3.png)
-![](http://qn.canisminor.cc/2017-11-14-4.png)
-![](http://qn.canisminor.cc/2017-11-14-5.png)
-![](http://qn.canisminor.cc/2017-12-06-12.png)
-![](http://qn.canisminor.cc/2017-11-14-6.png)
-![](http://qn.canisminor.cc/2017-11-16-13.png)
-![](http://qn.canisminor.cc/2017-11-14-7.png)
-![](http://qn.canisminor.cc/2017-11-14-8.png)
-![](http://qn.canisminor.cc/2017-11-14-9.png)
-![](http://qn.canisminor.cc/2017-11-14-10.png)
-
-<br />
-## 该分支尚不可用，请等待debug结束。
+## 如何调试/编译
+安装依赖: ```yarn install``` 或 ```npm install```  
+运行开发环境: ```yarn dev``` 或 ```npm run dev```  
+编译发行版: ```yarn build``` 或 ```npm run build```  
 
 ## 安装 (2 选 1)
 
@@ -56,6 +44,7 @@ http://ffxiv.canisminor.cc
 
 | 日期       | 版本   | 改动                                                                        |
 | ---------- | ------ | --------------------------------------------------------------------------- |
+| 2024.03.25 | v2.3.2 | Adj 复活项目, 修复部分历史遗留BUG, 修复了未正确引入的对韩语的支持, 添加了对多种样式职业图标的支持, 修复了缩放导致的部分组件渲染不正确.|
 | 2019.11.02 | v2.2.2 | Add 显示亲信战友系统中 NPC 的名字                                           |
 | 2019.11.01 | v2.2.1 | Add 添加青魔、舞者、绝枪战士图标和文字                                      |
 | 2017.12.01 | v2.2.0 | Adj 右键菜单,移出折叠增加初始化,折叠按钮移动至右上角                        |

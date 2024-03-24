@@ -1,5 +1,6 @@
 const Splash = {
   changelog: [
+    '|2024.03.24|v2.3.2|Adj 复活项目, 修复一些问题, 加入韩语支持, 增加选择多个职业图标样式的支持',
     '|2022.03.25|v2.2.3|Add 添加钐镰客、贤者图标和文字',
     '|2019.11.02|v2.2.2|Add 显示亲信战友系统中 NPC 的名字|',
     '|2019.11.01|v2.2.1|Add 添加青魔、舞者、绝枪战士图标和文字|',
@@ -56,9 +57,12 @@ export default {
   // basic
   cn: '简体中文',
   en: 'English',
+  kr: '한국어',
   damage: '输出',
   healing: '治疗',
   tanking: '承伤',
+  icon_default: '默认图标',
+  icon_glow: '发光图标',
   // splash
   'splash.changelog': '更新说明',
   'splash.usage': '使用说明',
@@ -138,6 +142,7 @@ export default {
   'setting.basic.split.gui': '界面',
   'setting.basic.uiAutoMiniActive': '自动切换迷你 (>人数)',
   'setting.basic.uiScaleActive': 'UI缩放 (倍)',
+  'setting.basic.icon': '职业图标',
   //
   'setting.basic.split.history': '历史记录',
   'setting.basic.historyLength': '历史记录条数',
@@ -172,6 +177,10 @@ export default {
   'setting.about.contact': '联系方式',
   'setting.about.git': '项目地址',
   'setting.about.link': '外部链接',
+  // progress.*.title
+  'progress.damage.title': '最高输出',
+  'progress.healing.title': '最高治疗',
+  'progress.tanking.title': '承伤',
   // placeholder
   'placeholder.you': '我',
   'placeholder.img': '图片网址',

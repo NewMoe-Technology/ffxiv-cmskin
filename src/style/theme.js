@@ -1,9 +1,9 @@
-import _ from 'lodash';
+const _ = require('lodash');
 
 const Base = {
   '@primary-color': '#bca98a',
   '@link-color': '#eee1c5',
-  '@border-radius-base': '2px',
+  '@border-radius-base': '5px',
   '@font-size-base': '16px',
   '@line-height-base': '1.2',
 };
@@ -20,4 +20,4 @@ const Layout = {
 };
 
 const ThemeConfig = _.assign(Base, Layout);
-export default ThemeConfig;
+module.exports = ThemeConfig;

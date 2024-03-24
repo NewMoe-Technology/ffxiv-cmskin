@@ -1,6 +1,5 @@
 @import 'import';
 .input {
-  margin-bottom: 1rem;
   position: relative;
 }
 .menu {
@@ -20,6 +19,7 @@
     font-size: 0.8rem;
     text-align: center;
     background: rgba(#fff, 0.07);
+    height: auto;
     border: none;
     position: relative;
   }
@@ -30,7 +30,6 @@
   }
   .ant-select-selection__placeholder {
     color: $c-grey;
-    margin-left: 0.4rem;
   }
   .ant-select-selection__choice__remove {
     opacity: 0.6;
@@ -98,7 +97,8 @@
   }
 }
 .single {
-  max-width: 10rem;
+  max-width: 11rem;
+  margin-left: 0.3rem;
   :global {
     .ant-select-selection {
       background: linear-gradient(
