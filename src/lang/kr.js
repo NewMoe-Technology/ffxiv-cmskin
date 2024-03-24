@@ -1,6 +1,6 @@
 const Splash = {
   changelog: [
-    '|2024.03.24|v2.3.2|Adj Revive project and fix some leftover issues, properly implement Korean language',
+    '|2024.03.24|v2.3.2|Adj Revive project and fixed some issues, properly implement Korean language, added selectable job icon style',
     '|2022.03.25|v2.2.3|Add Jon icon and text for Reaper, Sage',
     '|2019.11.02|v2.2.2|Add Display NPC name in The Trust System|',
     '|2019.11.01|v2.2.1|Add Job icon and text for BlueMage, Dancer, Gunbreaker|',
@@ -12,7 +12,7 @@ const Splash = {
     '|2017.11.13|v2.1.5|Add Overheal Progress|',
     '|2017.11.10|v2.1.4|Fix Load Setting Bug|',
     '|2017.11.10|v2.1.3|Add Setting: Quantity / Auto Mini|',
-    '|2017.11.10|v2.1.2|Add Feedbac / About|',
+    '|2017.11.10|v2.1.2|Add Feedback / About|',
     '|2017.11.10|v2.1.1|Fix Bug|',
     '|2017.11.09|v2.1.0|Add Quantity|',
     '|2017.11.09|v2.0.1|Fix MinoMode|',
