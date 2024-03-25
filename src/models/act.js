@@ -1,14 +1,20 @@
 import { parseEncounter, parseCombatant } from '../services/parseData';
 import { Lang } from '../components';
-import _ from 'lodash';
+import _, { last } from 'lodash';
 
 export default {
   namespace: 'act',
-  state: [],
+  state: {
+    encounterDatas: [],
+    lastEncounter: null
+  },
   reducers: {
     save(state, { payload: data }) {
-      return data;
+      return { ...state, encounterDatas: data };
     },
+    updateLastEncounter(state, { payload: lastEncounter }) {
+      return { ...state, lastEncounter };
+    }
   },
   effects: {
     *update({ payload: newData }, { put, select }) {
@@ -26,9 +32,21 @@ export default {
         const newCombatant = parseCombatant(Combatant);
 
         const Length = graphTimeActive ? graphTime : graphTimeDefault;
-        const isNew = newEncounter.name !== 'Encounter';
 
-        let data = yield select(state => state.act);
+        let act = yield select(state => state.act);
+        let data = act.encounterDatas;
+        let lastEncounter = act.lastEncounter;
+
+        const isNew = lastEncounter === null || lastEncounter === undefined || lastEncounter.zone !== newEncounter.zone || lastEncounter.isActive !== isActive;
+
+        // Update last encounter
+        lastEncounter = {
+          zone: newEncounter.zone,
+          isActive: isActive
+        }
+
+        yield put({ type: 'updateLastEncounter', payload: lastEncounter });
+
         let newChart =
           data[0] && data[0].Encounter && data[0].Encounter.name !== 'header.save'
             ? data[0].Chart
@@ -79,7 +97,7 @@ export default {
           Encounter: newEncounter,
           Combatant: newCombatant,
           Chart: newChart,
-          isActive: isActive,
+          isActive: isActive
         };
 
         // 判断战斗是否结束
@@ -87,9 +105,11 @@ export default {
           if (data.length > historyLength) data.pop();
           data.unshift(parseData);
 
-          data[1].Encounter.name = newEncounter.name;
+          if (data[1] !== null && data[1] !== undefined)
+            data[1].Encounter.name = newEncounter.name;
+
           data[0].Encounter.name = Lang('header.save');
-        } else {
+        } else if (isActive == 'true') {
           parseData.Encounter.name = Lang('header.inbattle');
           data[0] = _.assign(data[0], parseData);
         }

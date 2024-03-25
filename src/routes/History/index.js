@@ -8,7 +8,7 @@ import style from './index.scss';
 const { Header, Content, Bar, Footer, Split } = View;
 const Setting = ['historyPage', 'uiMini'];
 const State = state => ({
-  data: state.act,
+  data: state.act.encounterDatas,
   ...getSetting(Setting, state.setting),
 });
 

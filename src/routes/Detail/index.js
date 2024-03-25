@@ -20,7 +20,7 @@ const Setting = [
   'iconSet'
 ];
 const State = state => {
-  const act = state.act[state.setting.historyPage];
+  const act = state.act.encounterDatas[state.setting.historyPage];
   return {
     Combatant: act ? act.Combatant : {},
     ChartData: act ? act.Chart : {},

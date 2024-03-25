@@ -8,7 +8,7 @@ const { Header, Content, Footer, Split } = View;
 const Setting = ['uiMini', 'normalMini'];
 
 const State = state => {
-  const act = state.act[state.setting.historyPage];
+  const act = state.act.encounterDatas[state.setting.historyPage];
   return {
     Encounter: act ? act.Encounter : {},
     Combatant: act ? act.Combatant : {},

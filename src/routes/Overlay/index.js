@@ -27,7 +27,7 @@ const Setting = [
 ];
 
 const State = state => {
-  const act = state.act[state.setting.historyPage];
+  const act = state.act.encounterDatas[state.setting.historyPage];
   return {
     timeout: 0,
     Encounter: act ? act.Encounter : {},
