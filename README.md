@@ -1,7 +1,6 @@
 # CanisMinor ACT
 
 [![](https://img.shields.io/github/license/NewMoe-Technology/ffxiv-cmskin.svg)](https://github.com/NewMoe-Technology/ffxiv-cmskin/blob/master/LICENSE)
-[![](https://img.shields.io/github/tag/NewMoe-Technology/ffxiv-cmskin.svg)](https://github.com/NewMoe-Technology/ffxiv-cmskin)
 [![](https://img.shields.io/badge/Works%20with-OverlayPlugin-green.svg)](https://github.com/OverlayPlugin/OverlayPlugin)
 
 `ACT` `OverlayPlugin` `FFXIV` `React` `Redux`
@@ -11,6 +10,7 @@
 **README:** [📙 English (EN)](en_README.md)
 
 ## 如何调试/编译
+PS: 由于项目久远, 升级webpack5后代码热重载会发生报错, 请使用F5刷新  
 安装依赖: ```yarn install``` 或 ```npm install```  
 运行开发环境: ```yarn dev``` 或 ```npm run dev```  
 编译发行版: ```yarn build``` 或 ```npm run build```  
@@ -62,8 +62,6 @@ https://overlay.diemoe.net/cmskin
 | 2017.10.18 | v1.0.1 | Add 右键菜单/折叠模式                                                       |
 | 2017.10.18 | v1.0.0 | Root CanisMinor Act 上线                                                    |
 
-<br />
-
 ## 使用说明
 
 | 模式      | 路径                                   |
@@ -74,8 +72,6 @@ https://overlay.diemoe.net/cmskin
 | 折叠模式  | 右键菜单 - 折叠/展开                   |
 | 透明模式  | 右键菜单 - 透明/实体                   |
 | 马赛克 ID | 右键菜单 - 马赛克/显示                 |
-
-<br />
 
 ## 关于量化
 
@@ -117,8 +113,6 @@ D1:380 / D2:320 / T:200 / H:100
 
 > PS:此为预设值，可在设置中调整
 
-<br />
-
 ## Q&A
 
 - **技术向反馈/讨论群:** 246243038
@@ -130,16 +124,11 @@ D1:380 / D2:320 / T:200 / H:100
 - **无法调节窗口大小:** 请关闭 ACT 中的，锁定窗口和鼠标穿透，并不要启动皮肤的折叠模式，然后右下角调整窗口大小
 - **本地版本和线上不一致:** 恭喜你遇到了 ACT 强制缓存，请打开调试模式 > Network 标签 > 勾选 Disable Cache，再右键刷新界面
 
-<br />
-
 ## Link
 
 - **Site:** [ffxiv.canisminor.cc](https://ffxiv.canisminor.cc)
 - **NGA.cn:** [bbs.ngacn.cc/read.php?tid=12689516](http://bbs.ngacn.cc/read.php?tid=12689516)
-- **Github:** [github.com/canisminor1990/ffxiv-cmski](https://github.com/canisminor1990/ffxiv-cmskin)
-- **Coding:** [coding.net/u/canisminor1990/p/ffxiv-cmskin](https://coding.net/u/canisminor1990/p/ffxiv-cmskin)
-
-<br />
+- **Github:** [github.com/canisminor1990/ffxiv-cmskin](https://github.com/canisminor1990/ffxiv-cmskin)
 
 ## Contributor
 
