@@ -1,12 +1,13 @@
 @import 'import';
 .tab {
-  color: $c-yellow;
+  color: var(--cmskin-generic-grey);
   font-size: 0.8rem;
   margin-right: 0.5rem;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   margin-left: -0.4rem;
   &:hover {
+    color: var(--cmskin-main-font-highlight);
     font-weight: 600;
   }
 }

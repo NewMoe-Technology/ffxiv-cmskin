@@ -6,7 +6,7 @@
   width: 100%;
   text-overflow: ellipsis;
   overflow: hidden;
-  color: $c-yellow;
+  color: var(--cmskin-main-font-highlight);
   margin-bottom: 0.2rem;
 }
 
@@ -15,7 +15,7 @@
 .show {
   text-align: right;
   font-weight: 600;
-  color: #fff;
+  color: var(--cmskin-main-font-color);
   font-size: inherit;
   text-shadow: 0 1px $c-bg-dark;
   z-index: 9;

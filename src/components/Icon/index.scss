@@ -14,7 +14,8 @@
     inset 0 -1px 0 rgba(255, 255, 255, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.4);
   cursor: pointer;
-  background-color: $c-icon;
+  color: #eee1c5 !important;
+  background-color: var(--cmskin-side-icon-bg-color);
   background-image: linear-gradient(
     to bottom,
     rgba(#fff, 0.2) 0%,

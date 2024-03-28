@@ -38,9 +38,13 @@
   }
 }
 .title {
-  color: $c-yellow;
+  color: var(--cmskin-main-font-color);
   margin-right: 0.3rem;
 }
+.number {
+  color: var(--cmskin-main-font-highlight);
+}
+
 .chartlist {
   display: flex;
   flex-wrap: wrap;

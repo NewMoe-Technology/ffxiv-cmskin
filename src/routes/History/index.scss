@@ -4,7 +4,7 @@
   background: $c-bg;
 }
 .bar {
-  color: $c-yellow;
+  color: var(--cmskin-main-font-color);
 }
 .content {
   padding: 0.2rem 0.4rem;
@@ -19,23 +19,23 @@
   &.active {
     background: linear-gradient(
       to right,
-      rgba($c-yellow-light, 0.1),
-      rgba($c-yellow-light, 0) 80%
+      #{'rgba(var(--cmskin-dropdown-selected-color), 0.8)'},
+      transparent 80%
     );
   }
 }
 .date {
-  color: $c-yellow;
+  color: var(--cmskin-main-font-highlight);
 }
 .title {
   margin-left: 0.5rem;
-  color: $c-white;
+  color: var(--cmskin-main-font-color);
   flex: 1;
   white-space: nowrap;
   overflow: hidden;
   text-shadow: 0 1px $c-bg-dark;
   > span {
-    color: $c-grey;
+    color: var(--cmskin-generic-grey);
     font-size: 0.7rem;
     font-weight: 400;
   }

@@ -1,5 +1,6 @@
 const Splash = {
   changelog: [
+    '|2024.03.29|v2.3.3|Add 主题切换功能, 新增亮色和经典主题',
     '|2024.03.24|v2.3.2|Adj 复活项目, 修复一些问题, 加入韩语支持, 增加选择多个职业图标样式的支持',
     '|2022.03.25|v2.2.3|Add 添加钐镰客、贤者图标和文字',
     '|2019.11.02|v2.2.2|Add 显示亲信战友系统中 NPC 的名字|',
@@ -61,8 +62,13 @@ export default {
   damage: '输出',
   healing: '治疗',
   tanking: '承伤',
+  // Icon
   icon_default: '默认图标',
   icon_glow: '发光图标',
+  // Theme
+  theme_dark: 'FFXIV 暗色',
+  theme_light: 'FFXIV 亮色',
+  theme_classic: 'FFXIV 经典',
   // splash
   'splash.changelog': '更新说明',
   'splash.usage': '使用说明',
@@ -121,8 +127,8 @@ export default {
   'setting.btn.reset': '恢复默认',
   'setting.btn.apply': '应用',
   // setting.message
-  'setting.message.reset': '重置成功',
-  'setting.message.apply': '应用成功',
+  'setting.message.reset': '已恢复默认设置',
+  'setting.message.apply': '配置已应用',
   'setting.message.error': '数值错误',
   'setting.message.root': '设置已初始化',
   // setting.basic
@@ -143,6 +149,7 @@ export default {
   'setting.basic.uiAutoMiniActive': '自动切换迷你 (>人数)',
   'setting.basic.uiScaleActive': 'UI缩放 (倍)',
   'setting.basic.icon': '职业图标',
+  'setting.basic.theme': '主题风格',
   //
   'setting.basic.split.history': '历史记录',
   'setting.basic.historyLength': '历史记录条数',

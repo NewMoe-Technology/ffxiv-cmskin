@@ -1,13 +1,23 @@
 @import 'import';
 @import 'root';
+@import 'themes';
+
 html,
 body,
 :global(#root) {
   height: 100%;
   background: transparent;
 }
+
 body {
   padding: 0.5rem;
   color: $c-white;
   user-select: none;
+}
+
+a {
+  color: var(--cmskin-generic-grey);
+  &:hover {
+    color: var(--cmskin-main-font-highlight);
+  }
 }

@@ -1,7 +1,7 @@
 @import 'import';
 :global {
   .ant-message-notice-content {
-    background: linear-gradient(to bottom, $c-bg-highlight, $c-bg);
+    background: linear-gradient(to bottom, var(--cmskin-button-highlight), var(--cmskin-button-color));
     border-radius: 0.25rem;
     box-shadow: 0 0 0 1px $c-bg-light inset, 0 2px 2px 2px rgba(#000, 0.5);
     color: $c-white;

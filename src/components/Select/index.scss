@@ -5,7 +5,7 @@
 .menu {
   border-top: 1px solid $c-bg-light;
   border-bottom: 1px solid $c-bg-dark;
-  background: #282828;
+  background: var(--cmskin-dropdown-bg-color);
   border-radius: 4px;
   text-shadow: 0 1px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.6), 0 2px 3px rgba(0, 0, 0, 0.6);
@@ -27,6 +27,7 @@
   .ant-select-selection__rendered {
     margin: 0 !important;
     padding: 0 !important;
+    line-height: 1.2rem !important;
   }
   .ant-select-selection__placeholder {
     color: $c-grey;
@@ -60,27 +61,27 @@
     padding: 0.3rem 0.8rem;
     border-radius: 1rem;
     font-size: 0.8rem !important;
-    line-height: 1;
-    color: $c-yellow;
+    line-height: 0.5rem;
+    color: var(--cmskin-main-font-color);
     background: transparent;
   }
   .ant-select-dropdown-menu-item-selected {
-    color: $c-yellow-light !important;
+    color: var(--cmskin-main-font-color) !important;
     background: linear-gradient(
       to right,
-      rgba($c-yellow, 0.1),
-      rgba($c-yellow, 0)
+      #{'rgba(var(--cmskin-dropdown-selected-color), 0.8)'},
+      transparent
     ) !important;
     &:after {
       color: $c-green !important;
     }
   }
   .ant-select-dropdown-menu-item-active {
-    color: $c-yellow-light;
+    color: var(--cmskin-main-font-color);
     background: linear-gradient(
       to right,
-      rgba(#000, 0.4),
-      rgba(#000, 0)
+      #{'rgba(var(--cmskin-dropdown-hover-color), 0.8)'},
+      transparent
     ) !important;
     &:after {
       color: $c-green-light !important;
@@ -98,15 +99,15 @@
 }
 .single {
   max-width: 11rem;
-  margin-left: 0.3rem;
+  margin-left: 2px;
   :global {
     .ant-select-selection {
       background: linear-gradient(
         to bottom,
-        $btn-highlight 0,
-        $btn-highlight 45%,
-        $btn 55%,
-        $btn 100%
+        var(--cmskin-button-highlight) 0,
+        var(--cmskin-button-highlight) 45%,
+        var(--cmskin-button-color) 55%,
+        var(--cmskin-button-color) 100%
       );
       width: 100%;
       border-radius: 2rem;
@@ -120,10 +121,13 @@
     }
     .ant-select-selection-selected-value {
       width: 100%;
+      line-height: 1rem;
+      text-align: left;
+      margin-left: 0.5rem;
     }
-    .ant-select-arrow:before {
-      color: $c-grey;
-      font-size: 0.9rem;
+    .ant-select-arrow {
+      color: #fff;
+      line-height: 1rem;
     }
   }
 }

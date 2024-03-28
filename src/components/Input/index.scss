@@ -1,13 +1,13 @@
 @import 'import';
 .input {
-  color: $c-white;
-  height: 1.4rem;
+  color: var(--cmskin-main-font-color);
+  height: 1.25rem;
   font-size: 0.8rem;
   text-align: center;
-  background: rgba(#fff, 0.07);
+  background: var(--cmskin-input-bg-color);
   box-shadow: 0 1px 0 rgba(#fff, 0.16), 0 -1px 0 $c-bg-dark;
   border: none;
   &::-webkit-input-placeholder {
-    color: $c-grey;
+    color: var(--cmskin-generic-grey);
   }
 }

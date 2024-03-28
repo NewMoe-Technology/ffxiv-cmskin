@@ -13,6 +13,7 @@ class Overlay extends PageComponent {
   Setting = [
     'lang',
     'iconSet',
+    'theme',
     'name',
     'nameActive',
     'img',
@@ -42,6 +43,11 @@ class Overlay extends PageComponent {
 
   handleIconChange = value => {
     this.setState({ iconSet: value });
+  };
+
+  handleThemeChange = value => {
+    this.setState({ theme: value });
+    document.body.setAttribute("data-theme", 'ffxiv-' + value.substring(6) + '-theme')
   };
 
   inputOnChange = (e, name, isNumber) => {
@@ -78,26 +84,14 @@ class Overlay extends PageComponent {
       </Checkbox>
     );
 
-    const LangItem = lang => (
-      <div className={style.listLang}>
-        <div className={style.listLangTitle}>{Lang('setting.basic.' + lang)}</div>
+    const SelectItem = (titleID, options, defaultValue, onChange) => (
+      <div className={style.listItem}>
+        <div className={style.listTitle}>{Lang(titleID)}</div>
         <Select
-          defaultValue={$.lang}
+          defaultValue={defaultValue}
           mode={false}
-          options={['cn', 'en', 'kr']}
-          onChange={this.handleLangChange}
-        />
-      </div>
-    );
-
-    const IconThemeItem = () => (
-      <div className={style.listLang}>
-        <div className={style.listLangTitle}>{Lang('setting.basic.icon')}</div>
-        <Select
-          defaultValue={$.iconSet}
-          mode={false}
-          options={['icon_default', 'icon_glow']}
-          onChange={this.handleIconChange}
+          options={options}
+          onChange={onChange}
         />
       </div>
     );
@@ -116,7 +110,7 @@ class Overlay extends PageComponent {
       <Content key={$.timekey} className={style.content}>
         <div className={style.body}>
           <Split className={style.title} id="setting.basic.split.lang" />
-          {LangItem('lang')}
+          {SelectItem('setting.basic.lang', ['cn', 'en', 'kr'], $.lang, this.handleLangChange)}
           <Split className={style.title} id="setting.basic.split.personal" />
           {CheckItem('nameActive', 'name', 'placeholder.you')}
           {CheckItem('imgActive', 'img', 'placeholder.img')}
@@ -130,7 +124,8 @@ class Overlay extends PageComponent {
           <Split className={style.title} id="setting.basic.split.gui" />
           {CheckItem('uiAutoMiniActive', 'uiAutoMini')}
           {CheckItem('uiScaleActive', 'uiScale')}
-          {IconThemeItem()}
+          {SelectItem('setting.basic.icon', ['icon_default', 'icon_glow'], $.iconSet, this.handleIconChange)}
+          {SelectItem('setting.basic.theme', ['theme_dark', 'theme_light', 'theme_classic'], $.theme, this.handleThemeChange)}
           <Split className={style.title} id="setting.basic.split.history" />
           {InputItem('historyLength')}
         </div>

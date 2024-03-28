@@ -10,7 +10,8 @@ const Setting = {
   nameActive: true,
   img: '',
   imgActive: false,
-  iconSet: "icon_default",
+  iconSet: 'icon_default',
+  theme: 'theme_dark',
   // Data
   graphHide: false,
   graphTime: 30,
@@ -80,6 +81,7 @@ export default {
           // debug
           console.log('[CM] Setting Load');
           Console.table(Data);
+          document.body.setAttribute("data-theme", 'ffxiv-' + Data.theme.substring(6) + '-theme')
         }
       } catch (e) {
         setCookie('setting', Setting);

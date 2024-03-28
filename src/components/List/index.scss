@@ -15,8 +15,8 @@
   &:hover {
     background: linear-gradient(
       to right,
-      rgba($c-yellow-light, 0.1),
-      rgba($c-yellow-light, 0) 80%
+      #{'rgba(var(--cmskin-dropdown-selected-color), 0.8)'},
+      transparent 80%
     );
   }
 }
@@ -49,13 +49,14 @@
   font-weight: 500;
   text-shadow: 0 1px $c-bg-dark;
   text-overflow: ellipsis;
+  color: var(--cmskin-main-font-color);
 }
 .desc {
   overflow: hidden;
   width: 100%;
   font-size: 0.7rem;
   margin-top: 0.2rem;
-  color: $c-yellow;
+  color: var(--cmskin-main-font-highlight);
   text-overflow: ellipsis;
   > span {
     display: inline-block;

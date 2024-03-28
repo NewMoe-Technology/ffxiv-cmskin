@@ -3,7 +3,7 @@
   font-size: 0.9rem;
   display: flex;
   align-items: center;
-  height: 1.6rem;
+  height: 1.5rem;
   padding: 0;
   margin: 0 0 0.2rem !important;
   color: $c-yellow-light;
@@ -14,13 +14,13 @@
 }
 .title {
   width: 10rem;
-  line-height: 1;
+  color: var(--cmskin-main-font-color);
 }
 .input {
   flex: 1;
 }
 :global {
-  $size: 12px;
+  $size: 0.75rem;
   .ant-checkbox-inner {
     width: $size;
     height: $size;
@@ -32,8 +32,8 @@
   .ant-checkbox-inner:after {
     content: '';
     border: none !important;
-    width: $size - 4px !important;
-    height: $size - 4px !important;
+    width: calc($size - 4px) !important;
+    height: calc($size - 4px) !important;
     left: 1px !important;
     top: 1px !important;
     transform: none !important;

@@ -11,7 +11,7 @@ export default ({ data, color, desc, width = 200, height = 280 }) => {
       position: 'bottom',
       itemWrap: true,
       word: {
-        fill: 'rgba(255,255,255,.5)',
+        fill: 'rgba(119,119,119,1)',
       },
       formatter: name => `${name}: ${desc[name].percent} - ${desc[name].ps}`,
     });

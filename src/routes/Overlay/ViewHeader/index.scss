@@ -7,13 +7,13 @@
 .zone {
   flex: 1;
   > a {
-    color: $c-white;
+    color: var(--cmskin-main-font-color);
     &:hover {
-      color: $c-yellow-light;
+      color: var(--cmskin-main-font-highlight);
     }
   }
   > span {
-    color: $c-grey;
+    color: var(--cmskin-generic-grey);
     font-size: 0.8rem;
     text-shadow: none;
     @include media($m-small) {

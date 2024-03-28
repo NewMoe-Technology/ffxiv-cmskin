@@ -7,10 +7,10 @@
   text-decoration: none;
   background: linear-gradient(
     to bottom,
-    $btn-highlight 0,
-    $btn-highlight 45%,
-    $btn 55%,
-    $btn 100%
+    var(--cmskin-button-highlight) 0,
+    var(--cmskin-button-highlight) 45%,
+    var(--cmskin-button-color) 55%,
+    var(--cmskin-button-color) 100%
   );
   border-radius: 2rem;
   display: inline-block;
@@ -29,20 +29,20 @@
     color: #fff;
     background: linear-gradient(
       to bottom,
-      $btn-hover-highlight 0,
-      $btn-hover-highlight 45%,
-      $btn-hover 55%,
-      $btn-hover 100%
+      var(--cmskin-button-hover-highlight) 0,
+      var(--cmskin-button-hover-highlight) 45%,
+      var(--cmskin-button-hover-color) 55%,
+      var(--cmskin-button-hover-color) 100%
     );
   }
   &:active {
     color: rgba($c-white, 0.6);
     background: linear-gradient(
       to bottom,
-      $c-bg-highlight 0,
-      $c-bg-highlight 45%,
-      $c-bg 55%,
-      $c-bg 100%
+      var(--cmskin-button-active-highlight) 0,
+      var(--cmskin-button-active-highlight) 45%,
+      var(--cmskin-button-active-color) 55%,
+      var(--cmskin-button-active-color) 100%
     );
   }
 }

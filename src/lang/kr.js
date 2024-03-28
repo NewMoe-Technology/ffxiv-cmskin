@@ -1,5 +1,6 @@
 const Splash = {
   changelog: [
+    '|2024.03.29|v2.3.3|Add Added Theme switcher, added Light and Classic themes',
     '|2024.03.24|v2.3.2|Adj Revive project and fixed some issues, properly implement Korean language, added selectable job icon style',
     '|2022.03.25|v2.2.3|Add Jon icon and text for Reaper, Sage',
     '|2019.11.02|v2.2.2|Add Display NPC name in The Trust System|',
@@ -60,8 +61,13 @@ export default {
   damage: '피해량',
   healing: '치유',
   tanking: '받은 피해',
+  // Icon
   icon_default: 'Default Icon',
   icon_glow: 'Glow Icon',
+  // Theme
+  theme_dark: 'FFXIV Dark',
+  theme_light: 'FFXIV Light',
+  theme_classic: 'FFXIV Classic',
   // splash
   'splash.changelog': '패치 기록',
   'splash.usage': '사용법',
@@ -142,6 +148,7 @@ export default {
   'setting.basic.uiAutoMiniActive': '자동 미니 모드 (>num)',
   'setting.basic.uiScaleActive': 'UI 스케일',
   'setting.basic.icon': 'Job Icons',
+  'setting.basic.theme': 'Theme Settings',
   //
   'setting.basic.split.history': '기록',
   'setting.basic.historyLength': '보관할 기록 수',

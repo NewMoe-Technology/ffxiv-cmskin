@@ -1,0 +1,154 @@
+$themes: (
+    ffxiv-dark-theme: ( // 边框
+        border-color: #554121,
+        border-shadow: (inset 0 1px 1px 0 #cfc36e, inset 0 0 1px 0 hsla(53, 50%, 62%, .5), 0 0 1px 2px rgba(0, 0, 0, .5), 0 2px 2px 2px rgba(0, 0, 0, .5)),
+        border-inner: (inset 0 0 0 1px hsla(0, 0%, 100%, .1), 0 0 0 2px #222, 0 3px 1px #cfc36e, 0 0 2px 1px rgba(0, 0, 0, .4)),
+        // 内部
+        inner-header-color: rgba(#fff, 0.8),
+
+        inner-bg-color: #1e1e1e,
+        inner-bg-highlight: #3a3a3a,
+
+        // 字体
+        main-font-color: #ddd,
+        main-font-highlight: #eee1c5,
+
+        // 按钮
+        button-highlight: #494a49,
+        button-color: #2a2c2a,
+
+        button-hover-highlight: #5b5c5b,
+        button-hover-color: #3f413f,
+
+        button-active-highlight: #414241,
+        button-active-color: #252725,
+
+        // 设置里的侧边栏按钮
+        side-icon-bg-color: #962323,
+
+        // Dropdown
+        dropdown-bg-color: #282828,
+        dropdown-hover-color: (25, 25, 25),
+        dropdown-selected-color: (101, 85, 63),
+
+        // 输入框
+        input-bg-color: #fff2,
+
+        // 通用
+        generic-grey: #777
+    ),
+    ffxiv-light-theme: ( // 边框
+        border-color: #7d634e,
+        border-shadow: (inset 0 1px 1px 0 #fff, inset 0 0 1px 0 #bb8a6580, 0 0 1px 2px rgba(0, 0, 0, .5), 0 2px 2px 2px rgba(0, 0, 0, .5)),
+        border-inner: (inset 0 0 0 1px #0002, 0 0 0 1px #0002, 0 1px 1px #0002, 0 0 2px 1px rgba(0, 0, 0, .4)),
+
+        // 内部
+        inner-header-color: #763f1c,
+
+        inner-bg-color: #f7dcba,
+        inner-bg-highlight: #ffebd6,
+
+        // 字体
+        main-font-color: #763f1c,
+        main-font-highlight: #9f7860,
+
+        // 按钮
+        button-highlight: #6c523e,
+        button-color: #3f2c18,
+
+        button-hover-highlight: #7a6351,
+        button-hover-color: #52412f,
+
+        button-active-highlight: #614937,
+        button-active-color: #382715,
+
+        // 设置里的侧边栏按钮
+        side-icon-bg-color: #40444b,
+
+        // Dropdown
+        dropdown-bg-color: #deba9c,
+        dropdown-hover-color: (244, 190, 90),
+        dropdown-selected-color: (205, 154, 109),
+
+        // 输入框
+        input-bg-color: #ceaa8c,
+
+        // 通用
+        generic-grey: #777
+    ),
+    ffxiv-classic-theme: ( // 边框
+        border-color: #848284,
+        border-shadow: (inset 0 1px 1px 0 #fff, inset 0 0 1px 0 #848284, 0 0 1px 2px rgba(0, 0, 0, .5), 0 2px 2px 2px rgba(0, 0, 0, .5)),
+        border-inner: (inset 0 0 0 1px #848284, 0 0 0 2px #fff, 0 3px 1px #fff, 0 0 2px 1px rgba(0, 0, 0, .4)),
+
+        // 内部
+        inner-header-color: rgba(#fff, 0.8),
+
+        inner-bg-color: #21009c,
+        inner-bg-highlight: #21009c,
+
+        // 字体
+        main-font-color: #ddd,
+        main-font-highlight: #eee1c5,
+
+        // 按钮
+        button-highlight: #5171fb,
+        button-color: #5171fb,
+
+        button-hover-highlight: #627ffb,
+        button-hover-color: #627ffb,
+
+        button-active-highlight: #4865e1,
+        button-active-color: #4865e1,
+
+        // 设置里的侧边栏按钮
+        side-icon-bg-color: #40444b,
+
+        // Dropdown
+        dropdown-bg-color: #3124d6,
+        dropdown-hover-color: (25, 25, 25),
+        dropdown-selected-color: (99, 113, 235),
+
+        // 输入框
+        input-bg-color: #312cf7,
+
+        // 通用
+        generic-grey: #777
+    )
+);
+
+// Include themes
+:global {
+    @each $theme, $map in $themes {
+        :root [data-theme="#{$theme}"] {
+            --cmskin-border-color: #{map-get($map, border-color)};
+            --cmskin-border-shadow: #{map-get($map, border-shadow)};
+            --cmskin-border-inner: #{map-get($map, border-inner)};
+            --cmskin-inner-header-color: #{map-get($map, inner-header-color)};
+            --cmskin-inner-bg-color: #{map-get($map, inner-bg-color)};
+            --cmskin-inner-bg-highlight: #{map-get($map, inner-bg-highlight)};
+
+            --cmskin-main-font-color: #{map-get($map, main-font-color)};
+            --cmskin-main-font-highlight: #{map-get($map, main-font-highlight)};
+
+            --cmskin-button-highlight: #{map-get($map, button-highlight)};
+            --cmskin-button-color: #{map-get($map, button-color)};
+
+            --cmskin-button-hover-highlight: #{map-get($map, button-hover-highlight)};
+            --cmskin-button-hover-color: #{map-get($map, button-hover-color)};
+
+            --cmskin-button-active-highlight: #{map-get($map, button-active-highlight)};
+            --cmskin-button-active-color: #{map-get($map, button-active-color)};
+
+            --cmskin-side-icon-bg-color: #{map-get($map, side-icon-bg-color)};
+
+            --cmskin-dropdown-bg-color: #{map-get($map, dropdown-bg-color)};
+            --cmskin-dropdown-hover-color: #{map-get($map, dropdown-hover-color)};
+            --cmskin-dropdown-selected-color: #{map-get($map, dropdown-selected-color)};
+
+            --cmskin-input-bg-color: #{map-get($map, input-bg-color)};
+
+            --cmskin-generic-grey: #{map-get($map, generic-grey)};
+        }
+    }
+}

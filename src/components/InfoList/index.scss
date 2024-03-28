@@ -5,9 +5,10 @@
   margin-bottom: 0.5rem;
 }
 .time {
-  color: $c-yellow;
+  color: var(--cmskin-main-font-color);
   width: 5.5rem;
 }
 .content {
   flex: 1;
+  color: var(--cmskin-main-font-highlight)
 }

@@ -4,7 +4,7 @@
   background: $c-bg;
 }
 .bar {
-  color: $c-yellow;
+  color: var(--cmskin-main-font-color);
 }
 .flex {
   display: flex;
@@ -71,6 +71,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 0.5rem;
+  color: var(--cmskin-main-font-color);
   input {
     width: 3rem;
     margin: 0 0.5rem;
@@ -132,34 +133,23 @@
   }
 }
 
-.listItem,
-.listLang {
+.listItem {
   display: flex;
   align-items: center;
-  margin: 0.5rem 0;
-}
-
-.listTitle,
-.listLangTitle {
-  font-size: 0.9rem;
-  width: 10.8rem;
-  color: $c-yellow-light;
-  line-height: 1;
-}
-
-.listItem {
-  height: 1.6rem;
+  height: 2rem;
   padding: 0;
-  margin: 0 0 0.2rem !important;
   > span {
     display: flex;
-    align-items: center;
   }
 }
 
 .listTitle {
-  width: 11.2rem;
+  font-size: 0.9rem;
+  width: 11rem;
+  color: var(--cmskin-main-font-color);
+  line-height: 1.2rem;
 }
+
 .listInput {
   flex: 1;
 }
