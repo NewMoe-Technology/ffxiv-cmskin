@@ -19,10 +19,6 @@ const Author = [
 
 const Contact = [
   {
-    title: '讨论群',
-    desc: '246243038',
-  },
-  {
     title: 'QQ',
     desc: '40073838',
   },

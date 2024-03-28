@@ -116,7 +116,6 @@ D1:380 / D2:320 / T:200 / H:100
 
 ## Q&A
 
-- **技术向反馈/讨论群:** 246243038
 - **放大 GUI:** 4K 显示器调整 UI 缩放倍率至 `2`
 - **缩小 GUI:** 请默认开启 mini 模式，如果依然觉得大，可以调整 UI 缩放倍率至 `0.x`
 - **无法合并宠物数据:** 请升级 `OverlayPlugin` 至 `0.3.3.14` 以上
@@ -141,5 +140,4 @@ D1:380 / D2:320 / T:200 / H:100
 - **Author:** CanisMinor
 - **ID:** 男孩纸榨汁机(紫水)
 - **E-Mail:** <mailto:i@canisminor.cc>
-- **讨论群:** 246243038
 - **License:** [MIT](https://github.com/canisminor1990/ffxiv-cmskin/blob/master/LICENSE)
