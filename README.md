@@ -7,8 +7,6 @@
 
 **FFXIV CanisMinor ActSkin (Forked by NewMoe-Tech):** https://overlay.diemoe.net/cmskin
 
-**README:** [📙 English (EN)](en_README.md)
-
 ## 如何调试/编译
 PS: 由于项目久远, 升级webpack5后代码热重载会发生报错, 请使用F5刷新  
 安装依赖: ```yarn install``` 或 ```npm install```  
