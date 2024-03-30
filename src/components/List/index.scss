@@ -172,10 +172,8 @@
   &:hover {
     background: linear-gradient(
       to right,
-      rgba($c-yellow-light, 0),
-      rgba($c-yellow-light, 0.1) 5%,
-      rgba($c-yellow-light, 0.1) 60%,
-      rgba($c-yellow-light, 0)
+      #{'rgba(var(--cmskin-dropdown-selected-color), 0.6)'},
+      transparent 80%
     ) !important;
   }
 }

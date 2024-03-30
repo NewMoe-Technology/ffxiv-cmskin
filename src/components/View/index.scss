@@ -123,7 +123,7 @@
       display: block;
       position: absolute;
       filter: blur(2px);
-      background: linear-gradient(to right, rgba(#000, 0.6) 60%, rgba(#000, 0));
+      background: linear-gradient(to right, #{'rgba(var(--cmskin-transparent-mode-bg-color), 0.6)'} 60%, #{'rgba(var(--cmskin-transparent-mode-bg-color), 0)'});
     }
     border-radius: 0.25rem;
     text-shadow: 0 0 2px darken($c-yellow, 50%) !important;

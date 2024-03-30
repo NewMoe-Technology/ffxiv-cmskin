@@ -17,18 +17,18 @@
   font-weight: 600;
   color: var(--cmskin-main-font-color);
   font-size: inherit;
-  text-shadow: 0 1px $c-bg-dark;
+  text-shadow: 1px 1px #0004;
   z-index: 9;
 }
 
 .high {
-  color: $c-high;
-  text-shadow: 0 1px darken($c-high-dark, 20%);
+  color: var(--cmskin-high-font-color);
+  text-shadow: 1px 1px #0004;
 }
 
 .low {
-  color: $c-low;
-  text-shadow: 0 1px darken($c-low-dark, 20%);
+  color: var(--cmskin-low-font-color);
+  text-shadow: 1px 1px #0004;
 }
 
 // arrow

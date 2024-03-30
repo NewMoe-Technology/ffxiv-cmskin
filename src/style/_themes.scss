@@ -13,6 +13,9 @@ $themes: (
         main-font-color: #ddd,
         main-font-highlight: #eee1c5,
 
+        high-font-color: #ffdf30,
+        low-font-color: #ee80ed,
+
         // 按钮
         button-highlight: #494a49,
         button-color: #2a2c2a,
@@ -34,6 +37,9 @@ $themes: (
         // 输入框
         input-bg-color: #fff2,
 
+        // 透明模式
+        transparent-mode-bg-color: (0, 0, 0),
+
         // 通用
         generic-grey: #777
     ),
@@ -51,6 +57,9 @@ $themes: (
         // 字体
         main-font-color: #763f1c,
         main-font-highlight: #9f7860,
+
+        high-font-color: #39a78e,
+        low-font-color: #8873be,
 
         // 按钮
         button-highlight: #6c523e,
@@ -73,6 +82,9 @@ $themes: (
         // 输入框
         input-bg-color: #ceaa8c,
 
+        // 透明模式
+        transparent-mode-bg-color: (247, 220, 186),
+
         // 通用
         generic-grey: #777
     ),
@@ -90,6 +102,9 @@ $themes: (
         // 字体
         main-font-color: #ddd,
         main-font-highlight: #eee1c5,
+
+        high-font-color: #ffdf30,
+        low-font-color: #ee80ed,
 
         // 按钮
         button-highlight: #5171fb,
@@ -112,6 +127,9 @@ $themes: (
         // 输入框
         input-bg-color: #312cf7,
 
+        // 透明模式
+        transparent-mode-bg-color: (33, 0, 156),
+
         // 通用
         generic-grey: #777
     )
@@ -131,6 +149,9 @@ $themes: (
             --cmskin-main-font-color: #{map-get($map, main-font-color)};
             --cmskin-main-font-highlight: #{map-get($map, main-font-highlight)};
 
+            --cmskin-high-font-color: #{map-get($map, high-font-color)};
+            --cmskin-low-font-color: #{map-get($map, low-font-color)};
+
             --cmskin-button-highlight: #{map-get($map, button-highlight)};
             --cmskin-button-color: #{map-get($map, button-color)};
 
@@ -147,6 +168,8 @@ $themes: (
             --cmskin-dropdown-selected-color: #{map-get($map, dropdown-selected-color)};
 
             --cmskin-input-bg-color: #{map-get($map, input-bg-color)};
+
+            --cmskin-transparent-mode-bg-color: #{map-get($map, transparent-mode-bg-color)};
 
             --cmskin-generic-grey: #{map-get($map, generic-grey)};
         }
