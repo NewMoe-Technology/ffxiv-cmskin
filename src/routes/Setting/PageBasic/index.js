@@ -125,7 +125,7 @@ class Overlay extends PageComponent {
           {CheckItem('uiAutoMiniActive', 'uiAutoMini')}
           {CheckItem('uiScaleActive', 'uiScale')}
           {SelectItem('setting.basic.icon', ['icon_default', 'icon_glow'], $.iconSet, this.handleIconChange)}
-          {SelectItem('setting.basic.theme', ['theme_dark', 'theme_light', 'theme_classic'], $.theme, this.handleThemeChange)}
+          {SelectItem('setting.basic.theme', ['theme_dark', 'theme_light', 'theme_classic', 'theme_aetheris'], $.theme, this.handleThemeChange)}
           <Split className={style.title} id="setting.basic.split.history" />
           {InputItem('historyLength')}
         </div>

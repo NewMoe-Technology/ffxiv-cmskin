@@ -1,6 +1,6 @@
 {
   "name": "ffxiv-cmskin",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "description": "FFXIV CMSkin",
   "main": "src/index.ejs",
   "scripts": {

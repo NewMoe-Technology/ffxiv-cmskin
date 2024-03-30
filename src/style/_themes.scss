@@ -91,7 +91,7 @@ $themes: (
     ffxiv-classic-theme: ( // 边框
         border-color: #848284,
         border-shadow: (inset 0 1px 1px 0 #fff, inset 0 0 1px 0 #848284, 0 0 1px 2px rgba(0, 0, 0, .5), 0 2px 2px 2px rgba(0, 0, 0, .5)),
-        border-inner: (inset 0 0 0 1px #848284, 0 0 0 2px #fff, 0 3px 1px #fff, 0 0 2px 1px rgba(0, 0, 0, .4)),
+        border-inner: (0 0 0 2px #848284, 0 0 0 3px #fff),
 
         // 内部
         inner-header-color: rgba(#fff, 0.8),
@@ -132,6 +132,52 @@ $themes: (
 
         // 通用
         generic-grey: #777
+    ),
+    ffxiv-aetheris-theme: (
+        // 边框
+        border-color: #848284,
+        border-shadow: (inset 0 0 1px 0 #000a, 0 0 1px 2px rgba(0, 0, 0, .5), 0 2px 2px 2px rgba(0, 0, 0, .5)),
+        border-inner: (0 0 0 2px #2e3339),
+
+        // 内部
+        inner-header-color: rgba(#fff, 0.8),
+
+        inner-bg-color: #2e3339,
+        inner-bg-highlight: #2e3339,
+
+        // 字体
+        main-font-color: #ddd,
+        main-font-highlight: #eee1c5,
+
+        high-font-color: #ffdf30,
+        low-font-color: #ee80ed,
+
+        // 按钮
+        button-highlight: #40444b,
+        button-color: #40444b,
+
+        button-hover-highlight: #50545b,
+        button-hover-color: #50545b,
+
+        button-active-highlight: #393d43,
+        button-active-color: #393d43,
+
+        // 设置里的侧边栏按钮
+        side-icon-bg-color: #40444b,
+
+        // Dropdown
+        dropdown-bg-color: #2e3339,
+        dropdown-hover-color: (23, 25, 28),
+        dropdown-selected-color: (66, 69, 73),
+
+        // 输入框
+        input-bg-color: #40444b,
+
+        // 透明模式
+        transparent-mode-bg-color: (46, 51, 57),
+
+        // 通用
+        generic-grey: #888
     )
 );
 

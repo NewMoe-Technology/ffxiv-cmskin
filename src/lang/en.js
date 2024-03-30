@@ -1,5 +1,6 @@
 const Splash = {
   changelog: [
+    '|2024.03.30|v2.3.4|Add Added Aetheris Theme, Tweaked other themes style',
     '|2024.03.29|v2.3.3|Add Added Theme switcher, added Light and Classic themes',
     '|2024.03.24|v2.3.2|Adj Revive project and fixed some issues, properly implement Korean language, added selectable job icon style',
     '|2022.03.25|v2.2.3|Add Jon icon and text for Reaper, Sage',
@@ -68,6 +69,7 @@ export default {
   theme_dark: 'FFXIV Dark',
   theme_light: 'FFXIV Light',
   theme_classic: 'FFXIV Classic',
+  theme_aetheris: 'Aetheris',
   // splash
   'splash.changelog': 'Changelog',
   'splash.usage': 'Usage',
