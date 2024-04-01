@@ -7,6 +7,9 @@
   background: var(--cmskin-input-bg-color);
   box-shadow: 0 1px 0 rgba(#fff, 0.16), 0 -1px 0 $c-bg-dark;
   border: none;
+  width: 11rem;
+  max-width: 11rem;
+  border-radius: var(--cmskin-input-round-radius);
   &::-webkit-input-placeholder {
     color: var(--cmskin-generic-grey);
   }

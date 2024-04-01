@@ -3,7 +3,8 @@
 .btn {
   height: auto;
   color: $c-white;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  line-height: 1.1rem;
   text-decoration: none;
   background: linear-gradient(
     to bottom,
@@ -12,13 +13,14 @@
     var(--cmskin-button-color) 55%,
     var(--cmskin-button-color) 100%
   );
-  border-radius: 2rem;
+  border-radius: var(--cmskin-button-round-radius);
   display: inline-block;
   text-align: center;
   width: 6rem;
   text-shadow: 0 1px rgba(#000, 0.8);
   padding: 3px;
-  border-top: 1px solid rgba($c-white, 0.5);
+  border-top: var(--cmskin-button-border-top);
+  border-bottom: var(--cmskin-button-border-bottom);
   box-shadow: 0 0 3px 1px #000;
   position: relative;
   font-weight: 600;

@@ -1,5 +1,6 @@
 const Splash = {
   changelog: [
+    '|2024.04.01|v2.3.5|Add Added Material UI Theme, Tweaked other themes and components style',
     '|2024.03.30|v2.3.4|Add Added Aetheris Theme, Tweaked other themes style',
     '|2024.03.29|v2.3.3|Add Added Theme switcher, added Light and Classic themes',
     '|2024.03.24|v2.3.2|Adj Revive project and fixed some issues, properly implement Korean language, added selectable job icon style',
@@ -70,6 +71,7 @@ export default {
   theme_light: 'FFXIV Light',
   theme_classic: 'FFXIV Classic',
   theme_aetheris: 'Aetheris',
+  theme_materialui: 'Material UI',
   // splash
   'splash.changelog': '패치 기록',
   'splash.usage': '사용법',

@@ -9,7 +9,7 @@
   border-top: 1px solid $c-bg-light;
   border-bottom: 1px solid $c-bg-dark;
   background: var(--cmskin-dropdown-bg-color);
-  border-radius: 4px;
+  border-radius: var(--cmskin-dropdown-round-radius);
   text-shadow: 0 1px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.6), 0 2px 3px rgba(0, 0, 0, 0.6);
   min-width: 10rem;

@@ -26,16 +26,29 @@ $themes: (
         button-active-highlight: #414241,
         button-active-color: #252725,
 
+        button-round-radius: 2rem,
+        button-border-top: (1px solid rgba($c-white, 0.5)),
+        button-border-bottom: none,
+
         // 设置里的侧边栏按钮
         side-icon-bg-color: #962323,
 
         // Dropdown
+        select-round-radius: 2rem,
+        select-border-top: (1px solid rgba($c-white, 0.5)),
+
+        select-multiple-bg-color: #4f4f4f,
+        select-multiple-round-radius: 0.2rem,
+
         dropdown-bg-color: #282828,
         dropdown-hover-color: (25, 25, 25),
         dropdown-selected-color: (101, 85, 63),
 
+        dropdown-round-radius: 4px,
+
         // 输入框
         input-bg-color: #fff2,
+        input-round-radius: 5px,
 
         // 透明模式
         transparent-mode-bg-color: (0, 0, 0),
@@ -71,16 +84,29 @@ $themes: (
         button-active-highlight: #614937,
         button-active-color: #382715,
 
+        button-round-radius: 2rem,
+        button-border-top: (1px solid rgba($c-white, 0.5)),
+        button-border-bottom: none,
+
         // 设置里的侧边栏按钮
         side-icon-bg-color: #40444b,
 
         // Dropdown
+        select-round-radius: 2rem,
+        select-border-top: (1px solid rgba($c-white, 0.5)),
+
+        select-multiple-bg-color: #d2b297,
+        select-multiple-round-radius: 0.2rem,
+
         dropdown-bg-color: #deba9c,
         dropdown-hover-color: (244, 190, 90),
         dropdown-selected-color: (205, 154, 109),
 
+        dropdown-round-radius: 4px,
+
         // 输入框
         input-bg-color: #ceaa8c,
+        input-round-radius: 5px,
 
         // 透明模式
         transparent-mode-bg-color: (247, 220, 186),
@@ -116,16 +142,29 @@ $themes: (
         button-active-highlight: #4865e1,
         button-active-color: #4865e1,
 
+        button-round-radius: 2rem,
+        button-border-top: (1px solid rgba($c-white, 0.5)),
+        button-border-bottom: none,
+
         // 设置里的侧边栏按钮
         side-icon-bg-color: #40444b,
 
         // Dropdown
+        select-round-radius: 2rem,
+        select-border-top: (1px solid rgba($c-white, 0.5)),
+
+        select-multiple-bg-color: #4541f7,
+        select-multiple-round-radius: 0.2rem,
+
         dropdown-bg-color: #3124d6,
         dropdown-hover-color: (25, 25, 25),
         dropdown-selected-color: (99, 113, 235),
 
+        dropdown-round-radius: 4px,
+
         // 输入框
         input-bg-color: #312cf7,
+        input-round-radius: 5px,
 
         // 透明模式
         transparent-mode-bg-color: (33, 0, 156),
@@ -162,19 +201,91 @@ $themes: (
         button-active-highlight: #393d43,
         button-active-color: #393d43,
 
+        button-round-radius: 2rem,
+        button-border-top: none,
+        button-border-bottom: none,
+
         // 设置里的侧边栏按钮
         side-icon-bg-color: #40444b,
 
         // Dropdown
+        select-round-radius: 2rem,
+        select-border-top: none,
+        
+        select-multiple-bg-color: #53565d,
+        select-multiple-round-radius: 0.2rem,
+
         dropdown-bg-color: #2e3339,
         dropdown-hover-color: (23, 25, 28),
         dropdown-selected-color: (66, 69, 73),
 
+        dropdown-round-radius: 4px,
+
         // 输入框
         input-bg-color: #40444b,
+        input-round-radius: 5px,
 
         // 透明模式
         transparent-mode-bg-color: (46, 51, 57),
+
+        // 通用
+        generic-grey: #888
+    ),
+    ffxiv-materialui-theme: (
+        // 边框
+        border-color: #151415,
+        border-shadow: (inset 0 4px 0 0 #6a3cb5, inset 0 0 1px 0 #000a, 0 0 1px 2px #000a, 0 2px 2px 2px #000a),
+        border-inner: (0 0 0 2px #151415),
+
+        // 内部
+        inner-header-color: rgba(#fff, 0.8),
+
+        inner-bg-color: #161516,
+        inner-bg-highlight: #161516,
+
+        // 字体
+        main-font-color: #ddd,
+        main-font-highlight: #eee1c5,
+
+        high-font-color: #ffdf30,
+        low-font-color: #ee80ed,
+
+        // 按钮
+        button-highlight: #222222,
+        button-color: #222222,
+
+        button-hover-highlight: #383838,
+        button-hover-color: #383838,
+
+        button-active-highlight: #1e1e1e,
+        button-active-color: #1e1e1e,
+
+        button-round-radius: 0,
+        button-border-top: none,
+        button-border-bottom: (3px solid #161616),
+
+        // 设置里的侧边栏按钮
+        side-icon-bg-color: #151515,
+
+        // Dropdown
+        select-round-radius: 0,
+        select-border-top: none,
+        
+        select-multiple-bg-color: #3b3b3b,
+        select-multiple-round-radius: 0,
+
+        dropdown-bg-color: #1c1b1c,
+        dropdown-hover-color: (12, 11, 12),
+        dropdown-selected-color: (77, 60, 41),
+
+        dropdown-round-radius: 0,
+
+        // 输入框
+        input-bg-color: #232123,
+        input-round-radius: 0,
+
+        // 透明模式
+        transparent-mode-bg-color: (22, 21, 22),
 
         // 通用
         generic-grey: #888
@@ -207,13 +318,26 @@ $themes: (
             --cmskin-button-active-highlight: #{map-get($map, button-active-highlight)};
             --cmskin-button-active-color: #{map-get($map, button-active-color)};
 
+            --cmskin-button-round-radius: #{map-get($map, button-round-radius)};
+            --cmskin-button-border-top: #{map-get($map, button-border-top)};
+            --cmskin-button-border-bottom: #{map-get($map, button-border-bottom)};
+
             --cmskin-side-icon-bg-color: #{map-get($map, side-icon-bg-color)};
+
+            --cmskin-select-round-radius: #{map-get($map, select-round-radius)};
+            --cmskin-select-border-top: #{map-get($map, select-border-top)};
+
+            --cmskin-select-multiple-bg-color: #{map-get($map, select-multiple-bg-color)};
+            --cmskin-select-multiple-round-radius: #{map-get($map, select-multiple-round-radius)};
 
             --cmskin-dropdown-bg-color: #{map-get($map, dropdown-bg-color)};
             --cmskin-dropdown-hover-color: #{map-get($map, dropdown-hover-color)};
             --cmskin-dropdown-selected-color: #{map-get($map, dropdown-selected-color)};
 
+            --cmskin-dropdown-round-radius: #{map-get($map, dropdown-round-radius)};
+
             --cmskin-input-bg-color: #{map-get($map, input-bg-color)};
+            --cmskin-input-round-radius: #{map-get($map, input-round-radius)};
 
             --cmskin-transparent-mode-bg-color: #{map-get($map, transparent-mode-bg-color)};
 
