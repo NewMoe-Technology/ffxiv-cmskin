@@ -12,6 +12,7 @@ const Setting = {
   imgActive: false,
   iconSet: 'icon_default',
   theme: 'theme_dark',
+  titleBehaviour: 'title_openwiki',
   // Data
   graphHide: false,
   graphTime: 30,

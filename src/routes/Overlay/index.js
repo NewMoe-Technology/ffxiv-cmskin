@@ -24,6 +24,7 @@ const Setting = [
   'normalDamage',
   'normalHeal',
   'normalTank',
+  'titleBehaviour',
 ];
 
 const State = state => {
@@ -109,7 +110,7 @@ class Overlay extends Component {
 
     return [
       <Header key="header" uiMini={$.uiMini}>
-        <ViewHeader option={$.normalMini} data={$.Encounter} log={Package} uiMini={$.uiMini} />
+        <ViewHeader option={$.normalMini} data={$.Encounter} log={Package} uiMini={$.uiMini} titleBehaviour={$.titleBehaviour} />
       </Header>,
       BarInner,
       <Content key="body">{ContentInner}</Content>,

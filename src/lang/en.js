@@ -1,5 +1,6 @@
 const Splash = {
   changelog: [
+    '|2024.04.02|v2.3.6|Add Added Title Behaviour Option, opens up wiki by default',
     '|2024.04.01|v2.3.5|Add Added Material UI Theme, Tweaked other themes and components style',
     '|2024.03.30|v2.3.4|Add Added Aetheris Theme, Tweaked other themes style',
     '|2024.03.29|v2.3.3|Add Added Theme switcher, added Light and Classic themes',
@@ -72,6 +73,9 @@ export default {
   theme_classic: 'FFXIV Classic',
   theme_aetheris: 'Aetheris',
   theme_materialui: 'Material UI',
+  // Title behaviour
+  title_openwiki: 'Wiki',
+  title_openhistory: 'Battle History',
   // splash
   'splash.changelog': 'Changelog',
   'splash.usage': 'Usage',
@@ -151,6 +155,7 @@ export default {
   'setting.basic.split.gui': 'Gui',
   'setting.basic.uiAutoMiniActive': 'Auto Mini (>num)',
   'setting.basic.uiScaleActive': 'UI Scale',
+  'setting.basic.titleBehaviour': 'Title Behaviour',
   'setting.basic.icon': 'Job Icons',
   'setting.basic.theme': 'Theme Settings',
   //

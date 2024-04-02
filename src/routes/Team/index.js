@@ -5,7 +5,7 @@ import TabGroup from './TabGroup';
 import { getSetting } from '../../utils/getSetting';
 
 const { Header, Content, Footer, Split } = View;
-const Setting = ['uiMini', 'normalMini'];
+const Setting = ['uiMini', 'normalMini', 'titleBehaviour'];
 
 const State = state => {
   const act = state.act.encounterDatas[state.setting.historyPage];
@@ -19,7 +19,7 @@ const State = state => {
 const Team = $ => {
   return [
     <Header key="header" uiMini={$.uiMini}>
-      <ViewHeader option={$.normalMini} data={$.Encounter} uiMini={$.uiMini} />
+      <ViewHeader option={$.normalMini} data={$.Encounter} uiMini={$.uiMini} titleBehaviour={$.titleBehaviour} />
     </Header>,
     <Content key="body">
       <TabGroup Encounter={$.Encounter} Combatant={$.Combatant} />

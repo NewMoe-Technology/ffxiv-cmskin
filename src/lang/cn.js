@@ -1,5 +1,6 @@
 const Splash = {
   changelog: [
+    '|2024.04.02|v2.3.6|Add 添加修改标题行为的选项, 默认为打开Wiki',
     '|2024.04.01|v2.3.5|Add 添加 Material UI 主题, 微调其他组件和主题样式',
     '|2024.03.30|v2.3.4|Add 添加 Aetheris 主题, 微调其他主题的样式',
     '|2024.03.29|v2.3.3|Add 主题切换功能, 新增亮色和经典主题',
@@ -72,6 +73,9 @@ export default {
   theme_classic: 'FFXIV 经典',
   theme_aetheris: 'Aetheris',
   theme_materialui: 'Material UI',
+  // Title behaviour
+  title_openwiki: '打开Wiki',
+  title_openhistory: '打开历史战斗',
   // splash
   'splash.changelog': '更新说明',
   'splash.usage': '使用说明',
@@ -151,6 +155,7 @@ export default {
   'setting.basic.split.gui': '界面',
   'setting.basic.uiAutoMiniActive': '自动切换迷你 (>人数)',
   'setting.basic.uiScaleActive': 'UI缩放 (倍)',
+  'setting.basic.titleBehaviour': '标题行为',
   'setting.basic.icon': '职业图标',
   'setting.basic.theme': '主题风格',
   //
