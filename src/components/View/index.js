@@ -33,22 +33,12 @@ View.Content = ({ className, children, ...other }) => (
 View.Footer = ({ className, children, hasBtn, rightContent, ...other }) => {
   const FooterClass = classnames.bind(style)('footer', { hasBtn: hasBtn });
   const InFooterClass = classnames.bind(style)('infooter', className);
-  const Copyright = (
-    <a
-      className={style.copyright}
-      href="https://github.com/canisminor1990/ffxiv-cmskin"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      By CanisMinor
-    </a>
-  );
   return (
     <div className={FooterClass}>
       <div className={InFooterClass} {...other}>
         {children}
       </div>
-      {rightContent || Copyright}
+      {rightContent}
     </div>
   );
 };
