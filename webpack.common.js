@@ -31,7 +31,10 @@ module.exports = {
     publicPath: ''
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    alias: {
+      '@ant-design/icons/lib/dist$': path.resolve(__dirname, 'src/utils/antdIcons.js')
+    },
   },
   module: {
     rules: [
@@ -177,14 +180,8 @@ module.exports = {
       })
     ]
   },
-  devtool: 'source-map',
   target: 'web',
   performance: {
     hints: false
   },
-  devServer: {
-    compress: true,
-    port: 9000,
-    hot: true
-  }
 };

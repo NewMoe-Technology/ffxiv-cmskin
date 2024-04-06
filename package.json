@@ -4,8 +4,9 @@
   "description": "FFXIV CMSkin",
   "main": "src/index.ejs",
   "scripts": {
-    "dev": "webpack serve --mode development",
-    "build": "webpack --mode production"
+    "dev": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "analyze": "webpack --config webpack.analyze.js"
   },
   "repository": {
     "type": "git",
@@ -18,11 +19,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/plugin-transform-runtime": "^7.6.2",
-    "@babel/preset-env": "^7.6.3",
-    "@babel/preset-react": "^7.23.3",
-    "@babel/register": "^7.6.2",
+    "@ant-design/icons": "2.1.1",
     "antd": "^3.1.0",
     "classnames": "^2.2.5",
     "copy-webpack-plugin": "^12.0.2",
@@ -41,6 +38,11 @@
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
+    "@babel/core": "7.13.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/register": "^7.6.2",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-import": "^1.12.2",
@@ -74,7 +76,9 @@
     "sass": "^1.72.0",
     "sass-loader": "^14.1.1",
     "webpack": "^5.68.0",
+    "webpack-bundle-analyzer": "^4.10.1",
     "webpack-cli": "^4.9.0",
-    "webpack-dev-server": "^4.7.3"
+    "webpack-dev-server": "^4.7.3",
+    "webpack-merge": "^5.10.0"
   }
 }
