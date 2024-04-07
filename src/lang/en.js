@@ -128,7 +128,6 @@ export default {
   'setting.quantity': 'Quantity Setting',
   'setting.normal': 'Normal Data',
   'setting.detail': 'Detail Data',
-  'setting.comment': 'Comment',
   'setting.about': 'About',
   // setting.btn
   'setting.btn.reset': 'Reset',

@@ -128,7 +128,6 @@ export default {
   'setting.quantity': '수치 설정',
   'setting.normal': '일반 데이터',
   'setting.detail': '상세 데이터',
-  'setting.comment': '코멘트',
   'setting.about': '정보',
   // setting.btn
   'setting.btn.reset': '초기화',

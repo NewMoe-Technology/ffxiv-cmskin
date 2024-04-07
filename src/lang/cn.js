@@ -128,7 +128,6 @@ export default {
   'setting.quantity': '量化设置',
   'setting.normal': '基础页面',
   'setting.detail': '详情页面',
-  'setting.comment': '评论反馈',
   'setting.about': '关于',
   // setting.btn
   'setting.btn.reset': '恢复默认',

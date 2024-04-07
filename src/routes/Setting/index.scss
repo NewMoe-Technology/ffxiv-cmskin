@@ -3,14 +3,17 @@
   height: 100%;
   background: $c-bg;
 }
+
 .bar {
   color: var(--cmskin-main-font-color);
 }
+
 .flex {
   display: flex;
   flex: 1;
   overflow: hidden;
 }
+
 .left {
   display: flex;
   flex-direction: column;
@@ -19,22 +22,27 @@
   overflow-x: hidden;
   overflow-y: auto;
 }
+
 .right {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
+
 .content {
   display: flex;
   flex-direction: column;
 }
+
 .body {
   flex: 1;
   font-size: 0.8rem;
 }
+
 .title {
   margin-bottom: 0.6rem;
 }
+
 .item {
   font-size: 0.9rem;
   display: flex;
@@ -50,10 +58,12 @@
   display: flex;
   align-items: center;
 }
+
 .foot {
   font-size: 0.7rem;
   color: $c-yellow;
 }
+
 .editor {
   padding: 1rem;
 }
@@ -61,12 +71,15 @@
 .list {
   margin-bottom: 1rem;
 }
+
 .logo {
   padding: 1rem;
 }
+
 .qtGroup {
   margin-bottom: 2rem;
 }
+
 .qtList {
   display: flex;
   align-items: center;
@@ -77,34 +90,37 @@
     margin: 0 0.5rem;
   }
 }
+
 .qtRight {
-  margin: 0 1rem;
-  i::before {
-    color: $c-grey;
-  }
+  margin: 0 0.5rem;
 }
 
-.smile i::before {
-  color: $c-high;
+.smile i {
+  color: var(--cmskin-high-font-color);
   text-shadow: 0 0 2px $c-high-dark;
-  font-size: 1.1rem;
-}
-.frown i::before {
-  color: $c-low;
-  text-shadow: 0 0 2px $c-low-dark;
-  font-size: 1.1rem;
-}
-.arrow-up i::before {
-  color: $c-red-light;
-  text-shadow: 0 0 2px $c-red;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  margin: 0 0.1rem;
 }
 
-.arrow-down i::before {
-  color: $c-green-light;
-  text-shadow: 0 0 2px $c-green;
-  font-size: 1.1rem;
+.frown i {
+  color: var(--cmskin-low-font-color);
+  text-shadow: 0 0 2px $c-low-dark;
+  font-size: 1rem;
+  margin: 0 0.1rem;
 }
+
+.arrow-up i {
+  color: var(--cmskin-high-font-color);
+  text-shadow: 0 0 2px $c-red;
+  font-size: 1rem;
+}
+
+.arrow-down i {
+  color: var(--cmskin-low-font-color);
+  text-shadow: 0 0 2px $c-green;
+  font-size: 1rem;
+}
+
 :global {
   .ant-checkbox-inner {
     background: linear-gradient(to bottom, #373232 0, #6a6662 100%);
@@ -124,6 +140,7 @@
       opacity: 0;
     }
   }
+
   .ant-checkbox-checked {
     .ant-checkbox-inner {
       &:after {
