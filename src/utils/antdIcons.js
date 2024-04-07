@@ -1,2 +1,2 @@
 // Ant 3 的无奈之举
-export { ArrowLeftOutline, ArrowUpOutline, ArrowDownOutline, ScanOutline, LineChartOutline, ClockCircleOutline, CaretDownOutline, CaretRightOutline, SmileOutline, FrownOutline, CloseOutline, LaptopOutline, BarChartOutline, BarsOutline, IdcardOutline, GithubOutline } from '@ant-design/icons'
+export { LeftOutline, ArrowLeftOutline, ArrowUpOutline, ArrowDownOutline, ScanOutline, LineChartOutline, ClockCircleOutline, CaretDownOutline, CaretRightOutline, SmileOutline, FrownOutline, CloseOutline, LaptopOutline, BarChartOutline, BarsOutline, IdcardOutline, GithubOutline } from '@ant-design/icons'
