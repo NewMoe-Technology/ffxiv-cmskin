@@ -26,7 +26,7 @@ module.exports = {
     ]
   },
   output: {
-    filename: 'vendor.[contenthash:8].js',
+    filename: '[name].[contenthash:8].js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: ''
   },
@@ -178,7 +178,10 @@ module.exports = {
           preset: ['default', { discardComments: { removeAll: true } }]
         }
       })
-    ]
+    ],
+    splitChunks: {
+      chunks: "all"
+    }
   },
   target: 'web',
   performance: {
