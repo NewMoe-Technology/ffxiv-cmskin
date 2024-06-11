@@ -1,5 +1,6 @@
 const Splash = {
   changelog: [
+    '|2024.06.11|v2.3.7|Add Added YoRHa Theme, Added Square Icon, Tweaked other themes style',
     '|2024.04.02|v2.3.6|Add Added Title Behaviour Option, opens up wiki by default',
     '|2024.04.01|v2.3.5|Add Added Material UI Theme, Tweaked other themes and components style',
     '|2024.03.30|v2.3.4|Add Added Aetheris Theme, Tweaked other themes style',
@@ -67,12 +68,14 @@ export default {
   // Icon
   icon_default: 'Default Icon',
   icon_glow: 'Glow Icon',
+  icon_square: 'Square Icon',
   // Theme
   theme_dark: 'FFXIV Dark',
   theme_light: 'FFXIV Light',
   theme_classic: 'FFXIV Classic',
   theme_aetheris: 'Aetheris',
   theme_materialui: 'Material UI',
+  theme_yorha: 'YoRHa',
   // Title behaviour
   title_openwiki: 'Wiki',
   title_openhistory: 'Battle History',

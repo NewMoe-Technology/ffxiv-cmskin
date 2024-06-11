@@ -1,5 +1,6 @@
 const Splash = {
   changelog: [
+    '|2024.06.11|v2.3.7|Add 添加 YoRHa 主题, 添加 方形图标, 调整其他主题的样式',
     '|2024.04.02|v2.3.6|Add 添加修改标题行为的选项, 默认为打开Wiki',
     '|2024.04.01|v2.3.5|Add 添加 Material UI 主题, 微调其他组件和主题样式',
     '|2024.03.30|v2.3.4|Add 添加 Aetheris 主题, 微调其他主题的样式',
@@ -67,12 +68,14 @@ export default {
   // Icon
   icon_default: '默认图标',
   icon_glow: '发光图标',
+  icon_square: '方形图标',
   // Theme
   theme_dark: 'FFXIV 暗色',
   theme_light: 'FFXIV 亮色',
   theme_classic: 'FFXIV 经典',
   theme_aetheris: 'Aetheris',
   theme_materialui: 'Material UI',
+  theme_yorha: 'YoRHa',
   // Title behaviour
   title_openwiki: '打开Wiki',
   title_openhistory: '打开历史战斗',

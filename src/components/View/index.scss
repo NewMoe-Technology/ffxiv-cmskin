@@ -83,7 +83,7 @@
   box-shadow: 0 -1px 0 $c-bg-dark, inset 0 -1px 0 $c-bg-light;
 }
 .view {
-  border-radius: 0.5rem;
+  border-radius: var(--cmskin-view-border-radius);
   background: var(--cmskin-border-color);
   box-shadow: var(--cmskin-border-shadow);
   .inner {

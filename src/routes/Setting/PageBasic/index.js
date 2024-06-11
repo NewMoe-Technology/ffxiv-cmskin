@@ -130,8 +130,8 @@ class Overlay extends PageComponent {
           {CheckItem('uiAutoMiniActive', 'uiAutoMini')}
           {CheckItem('uiScaleActive', 'uiScale')}
           {SelectItem('setting.basic.titleBehaviour', ['title_openwiki', 'title_openhistory'], $.titleBehaviour, this.handleTitleBehaviourChange)}
-          {SelectItem('setting.basic.icon', ['icon_default', 'icon_glow'], $.iconSet, this.handleIconChange)}
-          {SelectItem('setting.basic.theme', ['theme_dark', 'theme_light', 'theme_classic', 'theme_aetheris', 'theme_materialui'], $.theme, this.handleThemeChange)}
+          {SelectItem('setting.basic.icon', ['icon_default', 'icon_glow', 'icon_square'], $.iconSet, this.handleIconChange)}
+          {SelectItem('setting.basic.theme', ['theme_dark', 'theme_light', 'theme_classic', 'theme_aetheris', 'theme_materialui', 'theme_yorha'], $.theme, this.handleThemeChange)}
           <Split className={style.title} id="setting.basic.split.history" />
           {InputItem('historyLength')}
         </div>

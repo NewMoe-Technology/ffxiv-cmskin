@@ -1,5 +1,8 @@
 $themes: (
-    ffxiv-dark-theme: ( // 边框
+    ffxiv-dark-theme: (
+        view-border-radius: 0.5rem,
+
+        // 边框
         border-color: #554121,
         border-shadow: (inset 0 1px 1px 0 #cfc36e, inset 0 0 1px 0 hsla(53, 50%, 62%, .5), 0 0 1px 2px rgba(0, 0, 0, .5), 0 2px 2px 2px rgba(0, 0, 0, .5)),
         border-inner: (inset 0 0 0 1px hsla(0, 0%, 100%, .1), 0 0 0 2px #222, 0 3px 1px #cfc36e, 0 0 2px 1px rgba(0, 0, 0, .4)),
@@ -56,7 +59,10 @@ $themes: (
         // 通用
         generic-grey: #777
     ),
-    ffxiv-light-theme: ( // 边框
+    ffxiv-light-theme: (
+        view-border-radius: 0.5rem,
+
+        // 边框
         border-color: #7d634e,
         border-shadow: (inset 0 1px 1px 0 #fff, inset 0 0 1px 0 #bb8a6580, 0 0 1px 2px rgba(0, 0, 0, .5), 0 2px 2px 2px rgba(0, 0, 0, .5)),
         border-inner: (inset 0 0 0 1px #0002, 0 0 0 1px #0002, 0 1px 1px #0002, 0 0 2px 1px rgba(0, 0, 0, .4)),
@@ -114,7 +120,10 @@ $themes: (
         // 通用
         generic-grey: #777
     ),
-    ffxiv-classic-theme: ( // 边框
+    ffxiv-classic-theme: (
+        view-border-radius: 0.5rem,
+
+        // 边框
         border-color: #848284,
         border-shadow: (inset 0 1px 1px 0 #fff, inset 0 0 1px 0 #848284, 0 0 1px 2px rgba(0, 0, 0, .5), 0 2px 2px 2px rgba(0, 0, 0, .5)),
         border-inner: (0 0 0 2px #848284, 0 0 0 3px #fff),
@@ -173,6 +182,8 @@ $themes: (
         generic-grey: #777
     ),
     ffxiv-aetheris-theme: (
+        view-border-radius: 0.5rem,
+
         // 边框
         border-color: #848284,
         border-shadow: (inset 0 0 1px 0 #000a, 0 0 1px 2px rgba(0, 0, 0, .5), 0 2px 2px 2px rgba(0, 0, 0, .5)),
@@ -232,9 +243,11 @@ $themes: (
         generic-grey: #888
     ),
     ffxiv-materialui-theme: (
+        view-border-radius: 0,
+
         // 边框
         border-color: #151415,
-        border-shadow: (inset 0 4px 0 0 #6a3cb5, inset 0 0 1px 0 #000a, 0 0 1px 2px #000a, 0 2px 2px 2px #000a),
+        border-shadow: (inset 0 2px 0 0 #6a3cb5, inset 0 0 1px 0 #000a, 0 0 1px 2px #000a, 0 2px 2px 2px #000a),
         border-inner: (0 0 0 2px #151415),
 
         // 内部
@@ -289,6 +302,66 @@ $themes: (
 
         // 通用
         generic-grey: #888
+    ),
+    ffxiv-yorha-theme: (
+        view-border-radius: 0,
+
+        border-color: #b5ab96,
+        border-shadow: (inset 0 4px 0 0 #b5ab96, inset 0 0 1px 0 #000a, 0 0 1px 2px #000a, 0 2px 2px 2px #000a),
+        border-inner: (0 0 0 2px #b5ab96),
+
+        // 内部
+        inner-header-color: #b0aa94,
+
+        inner-bg-color: #dad0b5,
+        inner-bg-highlight: #dad0b5,
+
+        // 字体
+        main-font-color: #413e36,
+        main-font-highlight: #413e36,
+
+        high-font-color: #39a78e,
+        low-font-color: #8873be,
+
+        // 按钮
+        button-highlight: #4c4940,
+        button-color: #4c4940,
+
+        button-hover-highlight: #444139,
+        button-hover-color: #444139,
+
+        button-active-highlight: #35332c,
+        button-active-color: #35332c,
+
+        button-round-radius: 0,
+        button-border-top: none,
+        button-border-bottom: none,
+
+        // 设置里的侧边栏按钮
+        side-icon-bg-color: #40444b,
+
+        // Dropdown
+        select-round-radius: 0,
+        select-border-top: none,
+        
+        select-multiple-bg-color: #c4baa2,
+        select-multiple-round-radius: 0,
+
+        dropdown-bg-color: #dad4bb,
+        dropdown-hover-color: (174, 169, 149),
+        dropdown-selected-color: (174, 169, 149),
+
+        dropdown-round-radius: 0,
+
+        // 输入框
+        input-bg-color: #c4baa2,
+        input-round-radius: 0,
+
+        // 透明模式
+        transparent-mode-bg-color: (218, 208, 181),
+
+        // 通用
+        generic-grey: #888
     )
 );
 
@@ -296,6 +369,8 @@ $themes: (
 :global {
     @each $theme, $map in $themes {
         :root [data-theme="#{$theme}"] {
+            --cmskin-view-border-radius: #{map-get($map, view-border-radius)};
+
             --cmskin-border-color: #{map-get($map, border-color)};
             --cmskin-border-shadow: #{map-get($map, border-shadow)};
             --cmskin-border-inner: #{map-get($map, border-inner)};
