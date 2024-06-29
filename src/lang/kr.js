@@ -1,6 +1,6 @@
 const Splash = {
   changelog: [
-    '|2024.06.13|v2.3.8|Add Job Icons(Only Default Icon and Square Icon for now) and text for Viper and Pictomancer|',
+    '|2024.06.13|v2.3.8|Add Job Icons and text for Viper and Pictomancer|',
     '|2024.06.11|v2.3.7|Add YoRHa Theme, Added Square Icon, Tweaked other themes style|',
     '|2024.04.02|v2.3.6|Add Title Behaviour Option, opens up wiki by default|',
     '|2024.04.01|v2.3.5|Add Material UI Theme, Tweaked other themes and components style|',
