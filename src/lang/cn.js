@@ -1,6 +1,6 @@
 const Splash = {
   changelog: [
-    '|2024.06.13|v2.3.8|Add 蛇武士 与 绘灵法师 的职业图标与文本|',
+    '|2024.06.13|v2.3.8|Add 蝰蛇剑士 与 绘灵法师 的职业图标与文本|',
     '|2024.06.11|v2.3.7|Add YoRHa 主题, 添加 方形图标, 调整其他主题的样式|',
     '|2024.04.02|v2.3.6|Add 修改标题行为的选项, 默认为打开Wiki|',
     '|2024.04.01|v2.3.5|Add Material UI 主题, 微调其他组件和主题样式|',
@@ -240,7 +240,7 @@ export default {
   'role.gnb': '绝枪战士',
   'role.rpr': '钐镰客',
   'role.sge': '贤者',
-  'role.vpr': '蛇武士',
+  'role.vpr': '蝰蛇剑士',
   'role.pct': '绘灵法师',
   'role.chocobo': '陆行鸟',
   'role.limitbreak': '极限技',
