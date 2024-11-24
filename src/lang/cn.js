@@ -1,5 +1,6 @@
 const Splash = {
   changelog: [
+    '|2024.06.13|v2.3.9|Fix 治疗/坦克职业DPS判定文本不对应的问题. 移除韩语语言(因为无人维护).|',
     '|2024.06.13|v2.3.8|Add 蝰蛇剑士 与 绘灵法师 的职业图标与文本|',
     '|2024.06.11|v2.3.7|Add YoRHa 主题, 添加 方形图标, 调整其他主题的样式|',
     '|2024.04.02|v2.3.6|Add 修改标题行为的选项, 默认为打开Wiki|',
@@ -177,8 +178,8 @@ export default {
   // setting.quantity
   'setting.quantity.title.updwon': '输出升降提示',
   'setting.quantity.title.damage': '输出职业DPS判定',
-  'setting.quantity.title.heal': '坦克职业DPS判定',
-  'setting.quantity.title.tank': '治疗职业DPS判定',
+  'setting.quantity.title.heal': '治疗职业DPS判定',
+  'setting.quantity.title.tank': '坦克职业DPS判定',
   'setting.quantity.title.overheal': '治疗职业过量判定',
   'setting.quantity.desc.avDps': '团队平均DPS',
   'setting.quantity.desc.dps60': '60秒DPS',

@@ -1,5 +1,6 @@
 const Splash = {
   changelog: [
+    '|2024.11.24|v2.3.9|Fix Heal/Tank Damage Quantity text mismatched. Removed Korean language(due to no maintenance).|',
     '|2024.06.13|v2.3.8|Add Job Icons and text for Viper and Pictomancer|',
     '|2024.06.11|v2.3.7|Add YoRHa Theme, Added Square Icon, Tweaked other themes style|',
     '|2024.04.02|v2.3.6|Add Title Behaviour Option, opens up wiki by default|',
@@ -177,8 +178,8 @@ export default {
   // setting.quantity
   'setting.quantity.title.updwon': 'Dps Up & Down Tips',
   'setting.quantity.title.damage': 'Dps Damage Quantity',
-  'setting.quantity.title.heal': 'Tank Damage Quantity',
-  'setting.quantity.title.tank': 'Heal Damage Quantity',
+  'setting.quantity.title.heal': 'Heal Damage Quantity',
+  'setting.quantity.title.tank': 'Tank Damage Quantity',
   'setting.quantity.title.overheal': 'Heal Overheal Quantity',
   'setting.quantity.desc.avDps': 'Team Average Dps',
   'setting.quantity.desc.dps60': 'D60s',

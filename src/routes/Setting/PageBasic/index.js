@@ -115,7 +115,7 @@ class Overlay extends PageComponent {
       <Content key={$.timekey} className={style.content}>
         <div className={style.body}>
           <Split className={style.title} id="setting.basic.split.lang" />
-          {SelectItem('setting.basic.lang', ['cn', 'en', 'kr'], $.lang, this.handleLangChange)}
+          {SelectItem('setting.basic.lang', ['cn', 'en'], $.lang, this.handleLangChange)}
           <Split className={style.title} id="setting.basic.split.personal" />
           {CheckItem('nameActive', 'name', 'placeholder.you')}
           {CheckItem('imgActive', 'img', 'placeholder.img')}
