@@ -1,5 +1,6 @@
 const Splash = {
   changelog: [
+    '|2025.04.19|v2.3.10|Fix Including other players Chocobo in the statistics causes infinite duplicates. Pause chart updates when data remains unchanged (such as during cutscenes, being action restricted, etc.). Theme Aetheris tweakment.|',
     '|2024.11.24|v2.3.9|Fix Heal/Tank Damage Quantity text mismatched. Removed Korean language(due to no maintenance).|',
     '|2024.06.13|v2.3.8|Add Job Icons and text for Viper and Pictomancer|',
     '|2024.06.11|v2.3.7|Add YoRHa Theme, Added Square Icon, Tweaked other themes style|',

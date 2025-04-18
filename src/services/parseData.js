@@ -59,7 +59,6 @@ const parseTanking = (db, Damage) => ({
 });
 
 // 处理Combatant数组
-
 const parseCombatant = db => {
   let Combatant = [];
   let Damage = 0;
@@ -67,7 +66,14 @@ const parseCombatant = db => {
     Damage = Damage + parseInt(item['damagetaken']);
   });
   _.forEach(db, item => {
-    Combatant.push(parseCombatantData(item, Damage));
+    const leftBracket = item.name.indexOf('(');
+    const noBracket = leftBracket === -1;
+    // 过滤掉除属于自己的实体之外的实体
+    const isMyEntity = leftBracket !== -1 && item.name.slice(leftBracket + 1).replace(')', '').toLowerCase().trim() === 'you';
+
+    if (noBracket || isMyEntity) {
+      Combatant.push(parseCombatantData(item, Damage));
+    }
   });
   return Combatant;
 };
@@ -75,7 +81,6 @@ const parseCombatant = db => {
 export { parseCombatant, parseEncounter };
 
 // 格式化方法
-
 const parseName = db => {
   if (typeof db['name'] === 'undefined') return false;
   const leftBracketPosition = db['name'].indexOf('(');

@@ -1,3 +1,1 @@
-import { createHashHistory } from 'history';
-
-export const history = createHashHistory();
+export const history = require("history").createHashHistory();

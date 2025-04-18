@@ -70,16 +70,28 @@ export default {
           if (pureHps)
             item.healing.ps = parseInt(item.healing.ps * (100 - parseInt(item.healing.over)) / 100);
 
-          // 图标和历史记录相关
+          // 图表和历史记录相关
           if (!newChart[item.name]) newChart[item.name] = [];
           try {
-            newChart[item.name].push({
+            const newData = {
               time: newEncounter.time,
               dps: item.damage.ps >= 0 ? item.damage.ps : 0,
               heal: item.healing.ps >= 0 ? item.healing.ps : 0,
               tank: item.tanking.total >= 0 ? item.tanking.total : 0,
-            });
-            if (newChart[item.name].length > Length) newChart[item.name].shift();
+            };
+          
+            const lastData = newChart[item.name][newChart[item.name].length - 1];
+          
+            // 检查是否有数据变化 (防止推入重复数据)
+            const hasChanged = !lastData || 
+              lastData.dps !== newData.dps ||
+              lastData.heal !== newData.heal ||
+              lastData.tank !== newData.tank;
+            
+            if (hasChanged) {
+              newChart[item.name].push(newData);
+              if (newChart[item.name].length > Length) newChart[item.name].shift();
+            }
           } catch (e) {}
         };
 
