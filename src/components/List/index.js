@@ -45,7 +45,13 @@ const ListView = ({ tab, chart, item, firstItem, hasDps, avps, isBattle, ...$ })
   let Name = item.isMy ? ($.nameActive ? $.name : item.name) : item.name;
 
   // Fix limit break compatibility
-  if ($.hideName && item.job !== "limit break") Name = Lang(`role.${item.job}`);
+  if ($.hideName && item.job !== "limit break") {
+    if (item.isMy && $.nameActive) {
+      Name = $.name;
+    } else {
+      Name = Lang(`role.${item.job}`);
+    }
+  }
 
   const tabData = {
     dps: {

@@ -1,5 +1,6 @@
 const Splash = {
   changelog: [
+    '|2025.07.04|v2.4.1|Adj Make nickname still avaliable while hiding IDs.|',
     '|2025.04.19|v2.4.0|Fix Including other players Chocobo in the statistics causes infinite duplicates. Pause chart updates when data remains unchanged (such as during cutscenes, being action restricted, etc.). Theme Aetheris tweakment.|',
     '|2024.11.24|v2.3.9|Fix Heal/Tank Damage Quantity text mismatched. Removed Korean language(due to no maintenance).|',
     '|2024.06.13|v2.3.8|Add Job Icons and text for Viper and Pictomancer|',
@@ -139,13 +140,13 @@ export default {
   'setting.btn.reset': 'Reset',
   'setting.btn.apply': 'Apply',
   // setting.message
-  'setting.message.reset': 'Restored Default Config',
+  'setting.message.reset': 'Restored to Default Settings',
   'setting.message.apply': 'Config Saved',
   'setting.message.error': 'Wrong Input',
-  'setting.message.root': 'Setting Restore',
+  'setting.message.root': 'Initialized Settings',
   // setting.basic
   'setting.basic.split.lang': 'Language',
-  'setting.basic.lang': 'Lang (语言)',
+  'setting.basic.lang': 'Language (语言)',
   //
   'setting.basic.split.personal': 'Personal',
   'setting.basic.nameActive': 'Nickname',
