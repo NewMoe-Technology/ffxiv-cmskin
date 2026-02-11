@@ -28,7 +28,7 @@ module.exports = (isDev) => ({
   output: {
     filename: '[name].[contenthash:8].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: './',
     uniqueName: 'ffxiv_cmskin',
   },
   resolve: {
