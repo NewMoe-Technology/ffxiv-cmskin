@@ -1,5 +1,6 @@
 const Splash = {
   changelog: [
+    '|2026.02.12|v2.4.2|Add Add quick action button in bottom right corner.|',
     '|2025.07.04|v2.4.1|Adj Make nickname still avaliable while hiding IDs.|',
     '|2025.04.19|v2.4.0|Fix Including other players Chocobo in the statistics causes infinite duplicates. Pause chart updates when data remains unchanged (such as during cutscenes, being action restricted, etc.). Theme Aetheris tweakment.|',
     '|2024.11.24|v2.3.9|Fix Heal/Tank Damage Quantity text mismatched. Removed Korean language(due to no maintenance).|',

@@ -29,6 +29,24 @@
     color: var(--cmskin-generic-grey);
   }
   i:hover {
-    color: var(--cmskin-main-font-highlight);
+    color: var(--cmskin-main-font-highlight) !important;
+  }
+  
+  :global {
+    .ant-btn-link {
+      .anticon {
+        color: var(--cmskin-generic-grey) !important;
+      }
+
+      &:hover {
+        color: var(--cmskin-main-font-highlight) !important;
+        .anticon {
+          color: var(--cmskin-main-font-highlight) !important;
+        }
+        svg {
+          fill: var(--cmskin-main-font-highlight) !important;
+        }
+      }
+    }
   }
 }

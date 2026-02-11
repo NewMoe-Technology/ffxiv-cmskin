@@ -1,4 +1,4 @@
-import { Icon } from 'antd';
+import { Icon, Button, Tooltip } from 'antd';
 import { connect } from 'dva';
 import { Link } from 'dva/router';
 import { Component } from 'react';
@@ -25,6 +25,7 @@ const Setting = [
   'normalHeal',
   'normalTank',
   'titleBehaviour',
+  'hideName'
 ];
 
 const State = state => {
@@ -38,6 +39,12 @@ const State = state => {
     ...getSetting(Setting, state.setting),
   };
 };
+
+const TransparentIcon = () => (
+  <svg t="1770830670791" className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor">
+    <path d="M0 768V512h256v256H0z m0-512V0h256v256H0z m256 768V768h256v256H256z m0-512V256h256v256H256z m256 256V512h256v256H512z m0-512V0h256v256H512z m256 768V768h256v256H768z m0-512V256h256v256H768z"></path>
+  </svg>
+);
 
 class Overlay extends Component {
   state = {
@@ -102,6 +109,18 @@ class Overlay extends Component {
       <Link to="/history" key="history">
         <Icon type="clock-circle-o" />
       </Link>,
+      <span key="separate-line" style={{ borderRight: "1px solid var(--cmskin-generic-grey)", display: "inline-block", width: "1px", alignSelf: "stretch", margin: "5px 10px" }}></span>,
+      <Tooltip key="hide-name" title={$.hideName ? Lang('menu.hideName.on') : Lang('menu.hideName.off')}>
+        <Button ghost type="link" icon={$.hideName ? "eye" : "eye-invisible"} size="small" style={{ width: "16px", marginRight: ".5rem" }} onClick={() => this.props.dispatch({ type: 'setting/update', payload: { hideName: !$.hideName } })} />
+      </Tooltip>,
+      <Tooltip key="mini-mode" title={$.uiMini ? Lang('menu.uiMini.on') : Lang('menu.uiMini.off')}>
+        <Button ghost type="link" icon={$.uiMini ? "arrows-alt" : "shrink"} size="small" style={{ width: "16px", marginRight: ".5rem" }} onClick={() => this.props.dispatch({ type: 'setting/update', payload: { uiMini: !$.uiMini } })} />
+      </Tooltip>,
+      <Tooltip key="transparent-mode" title={$.uiTrans ? Lang('menu.uiTrans.on') : Lang('menu.uiTrans.off')}>
+        <Button ghost type="link" size="small" style={{ padding: "0" }} onClick={() => this.props.dispatch({ type: 'setting/update', payload: { uiTrans: !$.uiTrans } })}>
+            <Icon component={TransparentIcon} />
+        </Button>
+      </Tooltip>,
     ];
 
     const RightContent = !window.active ? null : (

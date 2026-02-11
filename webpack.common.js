@@ -8,7 +8,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const webpack = require('webpack');
 const theme = require('./src/style/theme');
 
-module.exports = {
+module.exports = (isDev) => ({
   entry: {
     index: './src/index.js',
     vendor: [
@@ -28,7 +28,8 @@ module.exports = {
   output: {
     filename: '[name].[contenthash:8].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: ''
+    publicPath: '/',
+    uniqueName: 'ffxiv_cmskin',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -153,8 +154,8 @@ module.exports = {
       template: './src/index.ejs'
     }),
     new webpack.DefinePlugin({
-      $dirname: __dirname,
-      $isDev: process.env.NODE_ENV === 'development',
+      $dirname: JSON.stringify(__dirname),
+      $isDev: isDev,
       'process.platform': JSON.stringify(process.platform)
     }),
     new CopyWebpackPlugin({
@@ -187,4 +188,4 @@ module.exports = {
   performance: {
     hints: false
   },
-};
+});
