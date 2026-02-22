@@ -19,6 +19,8 @@ const View = ({ transparent, children, isKaguyaBgActive, ...other }) => {
       <div className={classnames(style.inner, { [style.kaguya]: shouldDrawKaguya })}>
         {shouldDrawKaguya && (
           <>
+            <div className={style.kaguya_border} />
+            <img className={style.kaguya_logo} src="img/kaguya/center.webp" alt="kaguya_logo" />
             <div className={style.kaguya_hime}>
               <img src="img/kaguya/kaguya.webp" alt="kaguya" />
             </div>
