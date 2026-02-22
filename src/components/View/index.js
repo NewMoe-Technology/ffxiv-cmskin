@@ -3,17 +3,33 @@ import { Lang } from '../';
 import style from './index.scss';
 import { history } from '../../history';
 
-const View = ({ transparent, children, ...other }) => {
+const View = ({ transparent, children, isKaguyaBgActive, ...other }) => {
   if (history.location.pathname.indexOf('setting') !== -1) transparent = false;
+  
+  const shouldDrawKaguya = !transparent && isKaguyaBgActive;
+
   return (
     <div
       className={classnames.bind(style)({
         view: !transparent,
-        viewTrans: transparent,
+        viewTrans: transparent
       })}
-      {...other}
-    >
-      <div className={style.inner}>{children}</div>
+      {...other}>
+        
+      <div className={classnames(style.inner, { [style.kaguya]: shouldDrawKaguya })}>
+        {shouldDrawKaguya && (
+          <>
+            <div className={style.kaguya_hime}>
+              <img src="img/kaguya/kaguya.webp" alt="kaguya" />
+            </div>
+            <div className={style.view_mask} />
+          </>
+        )}
+
+        <div className={style.subInner}>
+          {children}
+        </div>
+      </div>
     </div>
   );
 };

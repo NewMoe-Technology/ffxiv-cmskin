@@ -28,13 +28,14 @@ module.exports = (isDev) => ({
   output: {
     filename: '[name].[contenthash:8].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: './',
+    publicPath: 'auto',
     uniqueName: 'ffxiv_cmskin',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
     alias: {
-      '@ant-design/icons/lib/dist$': path.resolve(__dirname, 'src/utils/antdIcons.js')
+      '@ant-design/icons/lib/dist$': path.resolve(__dirname, 'src/utils/antdIcons.js'),
+      '@public': path.resolve(__dirname, 'public'),
     },
   },
   module: {
@@ -56,6 +57,7 @@ module.exports = (isDev) => ({
           {
             loader: 'css-loader',
             options: {
+              url: false,
               modules: {
                 localIdentName: '[local]___[hash:base64:5]'
               },

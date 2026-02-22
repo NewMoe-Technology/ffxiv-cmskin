@@ -1,5 +1,6 @@
 const Splash = {
   changelog: [
+    '|2026.02.22|v2.4.3|Add 超时空辉夜姬!|',
     '|2026.02.12|v2.4.2|Add 在右下角添加快捷操作按钮.|',
     '|2025.07.04|v2.4.1|Adj 让自定义昵称在隐藏ID的情况下也生效.|',
     '|2025.04.19|v2.4.0|Fix 会将其他玩家的陆行鸟统计进来造成无限重复的问题. 在数据未发生变化时(如观看过场动画, 被限制行动等)暂停图表更新. Aetheris主题调整.|',
@@ -165,6 +166,7 @@ export default {
   'setting.basic.titleBehaviour': '标题行为',
   'setting.basic.icon': '职业图标',
   'setting.basic.theme': '主题风格',
+  'setting.basic.useKaguyaBg': 'Kaguya! (仅支持Aetheris主题)',
   //
   'setting.basic.split.history': '历史记录',
   'setting.basic.historyLength': '历史记录条数',

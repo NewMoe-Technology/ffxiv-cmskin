@@ -1,18 +1,29 @@
 @import 'import';
-.view,
-.viewTrans {
+.view, .viewTrans {
   width: 100%;
   position: relative;
   overflow: hidden;
   padding: 5px;
 }
+
 .inner {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
   position: relative;
+  z-index: 0;
 }
+
+.subInner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 3;
+}
+
 .bar {
   min-height: 28px;
   white-space: nowrap;
@@ -22,6 +33,7 @@
   font-size: 0.75rem;
   z-index: 9;
 }
+
 .header {
   font-weight: 500;
   text-shadow: 0 1px $c-bg-dark;
@@ -32,6 +44,7 @@
     font-size: 0.8rem;
   }
 }
+
 .footer {
   min-height: 2rem;
   padding: 0.4rem 0.8rem;
@@ -39,14 +52,17 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .hasBtn {
   min-height: 2.8rem !important;
 }
+
 .infooter {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .content {
   width: 100%;
   max-height: 100%;
@@ -56,6 +72,7 @@
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
+
 .body {
   padding: 0.8rem;
   width: 100%;
@@ -64,6 +81,7 @@
   overflow-y: auto;
   position: relative;
 }
+
 .title {
   font-size: 0.7rem;
   color: var(--cmskin-main-font-color);
@@ -76,12 +94,23 @@
     display: block;
   }
 }
+
 .split {
   border: none;
   height: 1px;
   min-height: 1px;
   box-shadow: 0 -1px 0 $c-bg-dark, inset 0 -1px 0 $c-bg-light;
 }
+
+@keyframes flip24fps {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(-1);
+  }
+}
+
 .view {
   border-radius: var(--cmskin-view-border-radius);
   background: var(--cmskin-border-color);
@@ -90,12 +119,83 @@
     background: linear-gradient(to bottom, var(--cmskin-inner-bg-highlight), var(--cmskin-inner-bg-color) 2rem);
     border-radius: 0.25rem;
     box-shadow: var(--cmskin-border-inner);
+
+    &.kaguya {
+      --base-h: 215px;
+      --base-offset: 100px;
+      --base-w: 208px;
+
+      --zoom: 1;
+
+      @media (max-width: 1400px) { --zoom: 0.8; }
+      @media (max-width: 1024px) { --zoom: 0.6; }
+
+      --img-h: calc(var(--base-h) * var(--zoom));
+      --offset: calc(var(--base-offset) * var(--zoom));
+      --unit-w: calc(var(--base-w) * var(--zoom));
+
+      background-color: #f3eab0;
+
+      background-image: 
+          url("/img/kaguya/pancake.webp"), 
+          url("/img/kaguya/pancake.webp");
+
+      background-size: calc(var(--unit-w) * 2) var(--img-h);
+      background-position: 0 0, var(--unit-w) var(--offset);
+    }
+
+    .kaguya_hime {
+      position: absolute;
+      bottom: 0;
+      right: 2rem;
+      z-index: 0;
+
+      pointer-events: none;
+      
+      /* If we dont do this, kaguya hime will clip out of the render area :( */
+      @media (max-width: 520px) {
+        display: none;
+      }
+
+      img {
+        display: block;
+        width: 459px;
+        height: auto;
+        aspect-ratio: 459 / 395;
+
+        transform: translateZ(0); 
+        backface-visibility: hidden;
+        perspective: 1000px;
+
+        @media (max-height: 700px) {
+          width: 229px;
+          height: auto;
+        }
+
+        animation: flip24fps 0.41666s infinite steps(1);
+        will-change: transform;
+
+        transform-origin: bottom center;
+      }
+    }
+
+    .view_mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #2e3339cc;
+      z-index: 2;
+      pointer-events: none;
+    }
   }
   .bar {
     background: $c-bg-dark;
     box-shadow: 0 -1px 0 $c-bg-light inset, 0 1px 0 #000 inset;
   }
 }
+
 .viewTrans {
   &:hover {
     &:before {
@@ -146,6 +246,7 @@
     padding: 0 0.8rem;
   }
 }
+
 .copyright {
   line-height: 1;
   color: var(--cmskin-main-font-color);

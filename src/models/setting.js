@@ -13,6 +13,7 @@ const Setting = {
   iconSet: 'icon_default',
   theme: 'theme_dark',
   titleBehaviour: 'title_openwiki',
+  useKaguyaBg: false,
   // Data
   graphHide: false,
   graphTime: 30,
