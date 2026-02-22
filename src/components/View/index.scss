@@ -137,8 +137,8 @@
       background-color: #f3eab0;
 
       background-image: 
-          url("/img/kaguya/pancake.webp"), 
-          url("/img/kaguya/pancake.webp");
+          url("img/kaguya/pancake.webp"), 
+          url("img/kaguya/pancake.webp");
 
       background-size: calc(var(--unit-w) * 2) var(--img-h);
       background-position: 0 0, var(--unit-w) var(--offset);
