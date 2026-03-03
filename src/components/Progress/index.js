@@ -1,5 +1,6 @@
 import { Icon } from 'antd';
 import classnames from 'classnames/bind';
+import React, {useRef, useEffect, useState } from 'react';
 import style from './index.scss';
 
 export default ({ title, number, progress, overProgress, color, arrow, level, ...other }) => {
@@ -17,7 +18,24 @@ export default ({ title, number, progress, overProgress, color, arrow, level, ..
       </span>
     );
 
-  const Title = title ? <div className={style.skill}>{title}</div> : null;
+  const skillContainerRef = useRef(null);
+  const skillTextRef = useRef(null);
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    if (skillContainerRef.current && skillTextRef.current) {
+      const containerW = skillContainerRef.current.offsetWidth;
+      const textW = skillTextRef.current.offsetWidth;
+      
+      if (textW > containerW) {
+        setOffset(textW - containerW);
+      } else {
+        setOffset(0);
+      }
+    }
+  }, [title]);
+
+  const Title = title ? <div ref={skillContainerRef} className={style.skill}><span ref={skillTextRef} className={`${style['skill-text']} ${offset > 0 ? style['skill-text-animation'] : ''}`} style={{ '--offset': `${offset}px` }}>{title}</span></div> : null;
   const Overprogress = overProgress ? (
     <div
       className={style.overActive}

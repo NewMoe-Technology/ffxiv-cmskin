@@ -2,12 +2,36 @@
 
 .skill {
   font-size: 0.7rem;
-  text-align: right;
+  height: 0.75rem;
   width: 100%;
-  text-overflow: ellipsis;
   overflow: hidden;
-  color: var(--cmskin-main-font-highlight);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.1rem;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+
+  .skill-text {
+    line-height: 0.65rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    color: var(--cmskin-main-font-highlight);
+
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .skill-text-animation {
+    animation: text-scroll 6s linear infinite alternate;
+  }
+}
+
+@keyframes text-scroll {
+  0%, 20% {
+    transform: translate3d(0, 0, 0);
+  }
+  80%, 100% {
+    transform: translate3d(var(--offset), 0, 0);
+  }
 }
 
 // number
