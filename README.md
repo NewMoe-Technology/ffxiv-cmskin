@@ -1,5 +1,3 @@
-# 谁埃及吧维护维护把，我累了。
-
 # CanisMinor ACT
 
 [![](https://img.shields.io/github/license/NewMoe-Technology/ffxiv-cmskin.svg)](https://github.com/NewMoe-Technology/ffxiv-cmskin/blob/master/LICENSE)
